@@ -11,3 +11,16 @@
   --radius: 20px;
   --radius-sm: 12px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* dark (default) */
+  --bg: #0a0a0f;
+  --bg-2: #111118;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #f2f2f5;
+  --text-2: #b4b4c2;
+  --text-3: #7c7c8f;
+  --accent: #f5a623;
+  --accent-2: #a78bfa;
