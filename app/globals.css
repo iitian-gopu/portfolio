@@ -24,3 +24,16 @@
   --text-3: #7c7c8f;
   --accent: #f5a623;
   --accent-2: #a78bfa;
+  --accent-3: #34d399;
+  --accent-contrast: #0a0a0f;
+  --glow-1: rgba(245, 166, 35, 0.22);
+  --glow-2: rgba(167, 139, 250, 0.22);
+  --grid: rgba(255, 255, 255, 0.045);
+  --shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.7);
+  --nav-bg: rgba(10, 10, 15, 0.6);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f7f5;
+  --bg-2: #ffffff;
