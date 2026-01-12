@@ -11,3 +11,15 @@ const title = `${site.name} — ${site.role} · IIT (BHU) Varanasi`;
 const description = site.intro;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.siteUrl),
+  title,
+  description,
+  keywords: [
+    site.name,
+    "Software Engineer",
+    "Full Stack Developer",
+    "IIT BHU",
+    "IIT (BHU) Varanasi",
+    "Goldman Sachs",
+    "Next.js",
+    "React",
