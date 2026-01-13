@@ -37,3 +37,16 @@
 :root[data-theme="light"] {
   --bg: #f7f7f5;
   --bg-2: #ffffff;
+  --surface: rgba(20, 20, 30, 0.035);
+  --surface-2: rgba(20, 20, 30, 0.06);
+  --border: rgba(20, 20, 30, 0.1);
+  --border-strong: rgba(20, 20, 30, 0.22);
+  --text: #131320;
+  --text-2: #4a4a5c;
+  --text-3: #7b7b8c;
+  --accent: #d97706;
+  --accent-2: #7c3aed;
+  --accent-3: #059669;
+  --accent-contrast: #ffffff;
+  --glow-1: rgba(245, 166, 35, 0.28);
+  --glow-2: rgba(124, 58, 237, 0.2);
