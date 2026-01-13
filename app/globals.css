@@ -50,3 +50,16 @@
   --accent-contrast: #ffffff;
   --glow-1: rgba(245, 166, 35, 0.28);
   --glow-2: rgba(124, 58, 237, 0.2);
+  --grid: rgba(20, 20, 30, 0.06);
+  --shadow: 0 30px 80px -30px rgba(20, 20, 40, 0.25);
+  --nav-bg: rgba(247, 247, 245, 0.7);
+  color-scheme: light;
+}
+
+/* ─────────────────────────────────────────────
+   Base
+   ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
