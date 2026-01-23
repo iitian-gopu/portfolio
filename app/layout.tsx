@@ -36,3 +36,15 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_IN",
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: { index: true, follow: true },
+  icons: { icon: "/favicon.svg" },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
