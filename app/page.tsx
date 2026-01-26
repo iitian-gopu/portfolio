@@ -11,3 +11,15 @@ export default function HomePage() {
   return (
     <>
       <Effects />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+    </>
+  );
+}
