@@ -48,3 +48,16 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f7f5" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
+/* Runs before paint so the chosen theme never flashes. */
+const themeScript = `
+(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.dataset.theme=t}catch(e){}})();
+`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
