@@ -154,3 +154,16 @@ svg {
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 100%);
+}
+
+/* radial gradients instead of filter: blur() — far cheaper to animate */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+.bg-orb.one {
+  width: 70vw;
+  height: 70vw;
