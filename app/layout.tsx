@@ -61,3 +61,15 @@ const themeScript = `
 
 const jsonLd = {
   "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.role,
+  email: `mailto:${site.email}`,
+  url: site.siteUrl,
+  sameAs: [site.github, site.linkedin],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Indian Institute of Technology (BHU), Varanasi",
+  },
+  worksFor: { "@type": "Organization", name: "Goldman Sachs" },
+};
