@@ -180,3 +180,16 @@ svg {
   max-width: 780px;
   max-height: 780px;
   top: 25vh;
+  left: -26vw;
+  background: radial-gradient(circle, var(--glow-2) 0%, transparent 62%);
+  animation-delay: -8s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4vw, 6vh, 0) scale(1.12);
+  }
+}
