@@ -206,3 +206,16 @@ svg {
     transparent 45%
   );
   opacity: 0.55;
+  transition: opacity 0.4s;
+}
+
+@media (hover: none) {
+  .spotlight {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Layout helpers
+   ───────────────────────────────────────────── */
+.container {
