@@ -193,3 +193,16 @@ svg {
     transform: translate3d(4vw, 6vh, 0) scale(1.12);
   }
 }
+
+/* cursor spotlight */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--mx, -1000px) var(--my, -1000px),
+    var(--glow-2),
+    transparent 45%
+  );
+  opacity: 0.55;
