@@ -219,3 +219,16 @@ svg {
    Layout helpers
    ───────────────────────────────────────────── */
 .container {
+  width: min(100% - 2 * var(--gutter), var(--max-w));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(72px, 10vw, 128px);
+  scroll-margin-top: 90px;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
