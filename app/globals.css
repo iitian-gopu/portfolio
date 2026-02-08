@@ -232,3 +232,16 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  max-width: 720px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
