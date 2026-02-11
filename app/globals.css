@@ -245,3 +245,16 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.section-head h2 {
+  font-size: clamp(30px, 4.6vw, 48px);
+  font-weight: 600;
+}
