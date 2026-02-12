@@ -258,3 +258,16 @@ svg {
   font-size: clamp(30px, 4.6vw, 48px);
   font-weight: 600;
 }
+
+.section-head p {
+  color: var(--text-2);
+  font-size: 17px;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
