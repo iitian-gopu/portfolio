@@ -284,3 +284,16 @@ svg {
   }
   .bg-orb {
     animation: none;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Buttons & chips
+   ───────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
