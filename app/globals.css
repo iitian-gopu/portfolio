@@ -310,3 +310,16 @@ svg {
   border-color: var(--text-3);
 }
 
+.btn-primary {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: 0 12px 30px -12px var(--accent);
+}
+
