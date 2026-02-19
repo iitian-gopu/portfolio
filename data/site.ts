@@ -24,3 +24,16 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/gopal-jaiswal-97775518b",
   resumeUrl: "/resume.pdf", // TODO: drop your resume at public/resume.pdf (or set to "")
   siteUrl: "https://gopaljaiswal.vercel.app", // TODO: update after deploy
+  // Hero animation (plays once, muted). Swap for your own MP4 + poster image.
+  heroVideo: "/media/gopal-desk.mp4",
+  heroPoster: "/media/gopal-desk.jpg",
+  // YOUR PHOTO: drop it at public/media/gopal.jpg and set photo: "/media/gopal.jpg".
+  // When set, the hero shows your photo instead of the video.
+  photo: "",
+};
+
+export const stats = [
+  { value: "3+", label: "Years building software" },
+  { value: "3", label: "Companies, startup → Wall St." },
+  { value: "10+", label: "Production systems shipped" },
+  { value: "IIT", label: "(BHU) Varanasi, Class of 2023" },
