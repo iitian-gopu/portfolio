@@ -349,3 +349,16 @@ svg {
   color: var(--text);
   transform: translateY(-1px);
 }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.3s, transform 0.3s var(--ease), box-shadow 0.3s;
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+}
