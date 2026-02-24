@@ -375,3 +375,16 @@ svg {
   display: flex;
   justify-content: center;
   padding-inline: var(--gutter);
+  pointer-events: none;
+}
+
+.nav {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--nav-bg);
+  backdrop-filter: blur(18px) saturate(160%);
