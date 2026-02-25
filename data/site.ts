@@ -37,3 +37,16 @@ export const stats = [
   { value: "3", label: "Companies, startup → Wall St." },
   { value: "10+", label: "Production systems shipped" },
   { value: "IIT", label: "(BHU) Varanasi, Class of 2023" },
+];
+
+export type Project = {
+  title: string;
+  tag: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+  liveUrl?: string;
+  codeUrl?: string;
+  /** Optional screenshot for the card (public/projects/...). Falls back to the gradient. */
+  image?: string;
+  /** Optional demo MP4 (public/demos/...). Adds a "Watch demo" button + modal. */
