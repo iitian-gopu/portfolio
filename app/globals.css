@@ -388,3 +388,16 @@ svg {
   border: 1px solid var(--border);
   background: var(--nav-bg);
   backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 10px 40px -20px rgba(0, 0, 0, 0.6);
+  width: min(100%, var(--max-w));
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: auto;
