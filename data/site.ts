@@ -50,3 +50,16 @@ export type Project = {
   /** Optional screenshot for the card (public/projects/...). Falls back to the gradient. */
   image?: string;
   /** Optional demo MP4 (public/demos/...). Adds a "Watch demo" button + modal. */
+  demoVideo?: string;
+  /** CSS gradient used as the card artwork when there is no image */
+  art: string;
+  featured?: boolean;
+};
+
+export const projects: Project[] = [
+  {
+    title: "VisionAI",
+    tag: "Multi-agent GenAI platform",
+    description:
+      "A production-style AI workspace that routes each request to a specialized agent — chat, web search, coding, PDF RAG, PDF/PPT generation, image generation and image analysis — orchestrated with LangGraph.",
+    highlights: [
