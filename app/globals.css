@@ -453,3 +453,16 @@ svg {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text-2);
+  transition: transform 0.4s var(--ease), color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: rotate(-20deg);
+}
+
+.nav-cta {
+  padding: 9px 16px;
+  font-size: 14px;
+}
