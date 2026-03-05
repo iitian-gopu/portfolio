@@ -63,3 +63,16 @@ export const projects: Project[] = [
     description:
       "A production-style AI workspace that routes each request to a specialized agent — chat, web search, coding, PDF RAG, PDF/PPT generation, image generation and image analysis — orchestrated with LangGraph.",
     highlights: [
+      "LLM-classified routing across 8 agents; Qdrant-backed RAG over uploaded PDFs",
+      "Monaco code artifacts with a sandboxed live HTML/CSS/JS preview",
+      "Firebase auth, Redis sessions & memory, Razorpay credits, per-agent rate limiting",
+      "Dockerized Node microservices on AWS ECS/ECR, React on S3 + CloudFront via GitHub Actions",
+    ],
+    stack: ["React", "Node.js", "Express", "LangGraph", "LangChain", "Qdrant", "Redis", "MongoDB", "Docker", "AWS"],
+    liveUrl: "https://visionai-frontend-hvi0.onrender.com",
+    codeUrl: "https://github.com/iitian-gopu/visionai",
+    art: "linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #0ea5e9 100%)",
+    featured: true,
+  },
+  {
+    title: "Algo Platform",
