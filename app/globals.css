@@ -505,3 +505,16 @@ svg {
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     transform-origin: top;
     animation: pop 0.25s var(--ease);
+  }
+  .mobile-menu a {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  .mobile-menu a:hover {
+    background: var(--surface-2);
+  }
+}
+
+@keyframes pop {
+  from {
