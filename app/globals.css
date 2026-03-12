@@ -492,3 +492,16 @@ svg {
     pointer-events: auto;
     position: absolute;
     top: 64px;
+    left: var(--gutter);
+    right: var(--gutter);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    transform-origin: top;
+    animation: pop 0.25s var(--ease);
