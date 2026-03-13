@@ -76,3 +76,16 @@ export const projects: Project[] = [
   },
   {
     title: "Algo Platform",
+    tag: "Algorithmic trading stack",
+    description:
+      "A multi-asset, India-first algorithmic trading platform for mid-frequency strategies (1-minute to daily) — one monorepo covering the full path from raw market data to live orders, with backtest and live guaranteed to see identical data.",
+    highlights: [
+      "11 Python packages: data ingest, feature engineering, event-driven backtest, research & walk-forward, risk, paper/live trading",
+      "Risk layer with refusal gates, position/exposure limits, VaR and a kill-switch wired to operator alerts",
+      "Cron-dispatched orchestrator with run journal, run locks, retry ladders and evidence gates — no external scheduler",
+      "Spec-driven engineering: per-package SPEC.md, ADRs, pre-commit + duplication checks, generated status board",
+    ],
+    stack: ["Python", "pandas", "Parquet", "Streamlit", "uv", "pytest", "Docker"],
+    codeUrl: "https://github.com/iitian-gopu/algo-platform",
+    art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
+    featured: true,
