@@ -11,3 +11,16 @@ function useTheme() {
 
   useEffect(() => {
     const current = document.documentElement.dataset.theme;
+    if (current === "light" || current === "dark") setTheme(current);
+  }, []);
+
+  const toggle = () => {
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("theme", next);
+    } catch {
+      /* private mode etc. */
+    }
+  };
