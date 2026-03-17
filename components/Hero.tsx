@@ -10,3 +10,15 @@ function RoleRotator({ words }: { words: string[] }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % words.length), 2600);
+    return () => clearInterval(id);
+  }, [words.length]);
+
+  return (
+    <span className="rotator" aria-live="polite">
+      {words.map((word, i) => (
+        <span key={word} className={i === index ? "on" : ""} aria-hidden={i !== index}>
+          {word}
+        </span>
+      ))}
+    </span>
