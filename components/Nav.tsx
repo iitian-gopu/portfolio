@@ -24,3 +24,16 @@ function useTheme() {
       /* private mode etc. */
     }
   };
+
+  return { theme, toggle };
+}
+
+function useActiveSection() {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.querySelector<HTMLElement>(item.href))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    const observer = new IntersectionObserver(
