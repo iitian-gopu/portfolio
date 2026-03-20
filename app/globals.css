@@ -544,3 +544,16 @@ svg {
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
+  font-size: 13px;
+  color: var(--text-2);
+  width: fit-content;
+  margin-bottom: 28px;
+}
+
+.hero-pill .dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
