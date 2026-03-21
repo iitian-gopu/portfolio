@@ -22,3 +22,15 @@ function RoleRotator({ words }: { words: string[] }) {
         </span>
       ))}
     </span>
+  );
+}
+
+export default function Hero() {
+  const [first, ...rest] = site.name.split(" ");
+
+  return (
+    <section className="hero container" id="top">
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <div className="hero-pill reveal is-visible">
+            <span className="dot" />
