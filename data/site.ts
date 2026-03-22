@@ -89,3 +89,15 @@ export const projects: Project[] = [
     codeUrl: "https://github.com/iitian-gopu/algo-platform",
     art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
     featured: true,
+  },
+  {
+    title: "FigForge",
+    tag: "Real-time collaboration",
+    description:
+      "A minimal Figma clone with live multiplayer cursors, cursor chat, reactions, comment threads and a full drawing canvas.",
+    highlights: [
+      "Live presence, cursor chat & reactions via Liveblocks",
+      "Fabric.js canvas: shapes, freeform drawing, images, undo/redo",
+      "Keyboard shortcuts, history panel and export",
+    ],
+    stack: ["Next.js", "TypeScript", "Liveblocks", "Fabric.js", "Tailwind", "shadcn/ui"],
