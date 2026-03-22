@@ -557,3 +557,16 @@ svg {
   display: grid;
   place-items: center;
   background: var(--surface-2);
+  position: relative;
+}
+
+.hero-pill .dot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-3);
+  box-shadow: 0 0 0 0 var(--accent-3);
+  animation: pulse 2s infinite;
+}
+
