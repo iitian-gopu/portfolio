@@ -21,3 +21,15 @@ export default function Effects() {
     const onScroll = () => {
       const max = root.scrollHeight - window.innerHeight;
       root.style.setProperty("--p", String(max > 0 ? window.scrollY / max : 0));
+      setShowTop(window.scrollY > 600);
+    };
+
+    window.addEventListener("pointermove", onMove, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
