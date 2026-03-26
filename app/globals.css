@@ -582,3 +582,16 @@ svg {
   }
 }
 
+.hero-pill strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6.2vw, 78px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  max-width: 14ch;
+}
+
