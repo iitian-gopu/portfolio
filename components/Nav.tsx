@@ -49,3 +49,16 @@ function useActiveSection() {
     return () => observer.disconnect();
   }, []);
 
+  return active;
+}
+
+export default function Nav() {
+  const { theme, toggle } = useTheme();
+  const active = useActiveSection();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const close = () => setOpen(false);
+    window.addEventListener("resize", close);
+    return () => window.removeEventListener("resize", close);
+  }, []);
