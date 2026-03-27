@@ -34,3 +34,15 @@ export default function Hero() {
         <div className="hero-copy">
           <div className="hero-pill reveal is-visible">
             <span className="dot" />
+            <span>
+              Currently <strong>Software Engineer @ Goldman Sachs</strong> &middot; IIT (BHU) &rsquo;23
+            </span>
+          </div>
+
+          <h1 className="reveal is-visible">
+            {first} <span className="muted">{rest.join(" ")}</span>
+          </h1>
+
+          <div className="hero-role reveal is-visible">
+            <span>I&rsquo;m a</span>
+            <RoleRotator words={site.roles} />
