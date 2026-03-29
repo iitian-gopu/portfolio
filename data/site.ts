@@ -101,3 +101,16 @@ export const projects: Project[] = [
       "Keyboard shortcuts, history panel and export",
     ],
     stack: ["Next.js", "TypeScript", "Liveblocks", "Fabric.js", "Tailwind", "shadcn/ui"],
+    liveUrl: "https://fig-forge.vercel.app",
+    codeUrl: "https://github.com/iitian-gopu/FigForge",
+    art: "linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%)",
+    featured: true,
+  },
+  {
+    title: "NanoVercel",
+    tag: "Deployment platform",
+    description:
+      "A from-scratch Vercel clone: push a repo, get a live URL. Builds run in containers, artefacts land in S3 and a reverse proxy serves every project on its own subdomain.",
+    highlights: [
+      "api-server, build-server (Docker on ECS) and s3-reverse-proxy services",
+      "Kafka-backed build logs streamed to the UI with Socket.IO",
