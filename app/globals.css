@@ -608,3 +608,16 @@ svg {
   color: var(--text-2);
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35em;
+}
+
+.rotator {
+  display: inline-grid;
+  position: relative;
+  color: var(--text);
+  min-height: 1.3em;
+}
+
+.rotator span {
+  grid-area: 1 / 1;
