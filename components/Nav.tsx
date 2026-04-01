@@ -62,3 +62,16 @@ export default function Nav() {
     window.addEventListener("resize", close);
     return () => window.removeEventListener("resize", close);
   }, []);
+
+  return (
+    <div className="nav-wrap">
+      <nav className="nav" aria-label="Primary">
+        <a className="brand" href="#top" aria-label={`${site.name} — home`}>
+          <span className="brand-mark">{site.initials}</span>
+          <span>{site.firstName}</span>
+        </a>
+
+        <div className="nav-links">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} className={active === item.href ? "active" : ""}>
+              {item.label}
