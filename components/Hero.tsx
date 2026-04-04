@@ -46,3 +46,15 @@ export default function Hero() {
           <div className="hero-role reveal is-visible">
             <span>I&rsquo;m a</span>
             <RoleRotator words={site.roles} />
+          </div>
+
+          <p className="hero-tagline reveal is-visible">{site.tagline}</p>
+
+
+          <div className="hero-actions reveal is-visible">
+            <a className="btn btn-primary" href="#work">
+              See my work <ArrowUpRight size={16} />
+            </a>
+            <a className="btn" href="#contact">
+              Get in touch
+            </a>
