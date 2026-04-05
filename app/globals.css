@@ -621,3 +621,16 @@ svg {
 
 .rotator span {
   grid-area: 1 / 1;
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+}
+
+.rotator span.on {
+  opacity: 1;
+  transform: none;
