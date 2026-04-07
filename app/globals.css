@@ -634,3 +634,16 @@ svg {
 .rotator span.on {
   opacity: 1;
   transform: none;
+}
+
+.hero-tagline {
+  margin-top: 26px;
+  max-width: 600px;
+  font-size: clamp(16px, 1.5vw, 19px);
+  color: var(--text-2);
+}
+
+.hero-actions {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
