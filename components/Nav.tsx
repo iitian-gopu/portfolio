@@ -75,3 +75,15 @@ export default function Nav() {
           {navItems.map((item) => (
             <a key={item.href} href={item.href} className={active === item.href ? "active" : ""}>
               {item.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="nav-actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggle}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
