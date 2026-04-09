@@ -647,3 +647,16 @@ svg {
   margin-top: 36px;
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 8px;
+  margin-left: 6px;
+}
+
+.hero-meta {
+  margin-top: 56px;
+  display: grid;
