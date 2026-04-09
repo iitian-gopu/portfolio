@@ -58,3 +58,15 @@ export default function Hero() {
             <a className="btn" href="#contact">
               Get in touch
             </a>
+            <div className="hero-socials">
+              <a className="btn btn-icon" href={site.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github size={18} />
+              </a>
+              <a className="btn btn-icon" href={site.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin size={18} />
+              </a>
+              <a className="btn btn-icon" href={`mailto:${site.email}`} aria-label="Email">
+                <Mail size={18} />
+              </a>
+            </div>
+          </div>
