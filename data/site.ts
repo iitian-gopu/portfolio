@@ -114,3 +114,16 @@ export const projects: Project[] = [
     highlights: [
       "api-server, build-server (Docker on ECS) and s3-reverse-proxy services",
       "Kafka-backed build logs streamed to the UI with Socket.IO",
+      "Redis for state, S3 for static hosting, slug-based subdomains",
+    ],
+    stack: ["Node.js", "Express", "Next.js", "Docker", "AWS ECS", "S3", "Kafka", "Redis", "Socket.IO"],
+    codeUrl: "https://github.com/iitian-gopu/vercel-clone",
+    art: "linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #1e1b4b 100%)",
+    featured: true,
+  },
+  {
+    title: "Twitter Clone",
+    tag: "Full-stack · GraphQL",
+    description:
+      "Type-safe Twitter clone with Google OAuth, tweets with images, likes and follows — GraphQL API on Node with Prisma + Postgres and a Next.js client.",
+    highlights: [
