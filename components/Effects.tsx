@@ -44,3 +44,15 @@ export default function Effects() {
     return () => {
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <>
+      <div className="progress" aria-hidden="true" />
+      <div className="bg-canvas" aria-hidden="true">
+        <div className="bg-orb one" />
+        <div className="bg-orb two" />
+      </div>
+      <div className="spotlight" aria-hidden="true" />
