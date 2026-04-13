@@ -87,3 +87,16 @@ export default function Nav() {
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             title={theme === "dark" ? "Light mode" : "Dark mode"}
           >
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
+
+          {site.resumeUrl && (
+            <a className="btn btn-primary nav-cta" href={site.resumeUrl} target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          )}
+
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label="Toggle menu"
