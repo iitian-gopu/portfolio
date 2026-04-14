@@ -70,3 +70,15 @@ export default function Hero() {
               </a>
             </div>
           </div>
+        </div>
+
+        {(site.photo || site.heroVideo) && (
+          <div className="hero-media-col reveal is-visible">
+            <HeroMedia />
+          </div>
+        )}
+      </div>
+
+      <div className="hero-meta reveal is-visible" aria-label="Highlights">
+        {stats.map((s) => (
+          <div className="stat" key={s.label}>
