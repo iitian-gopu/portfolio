@@ -100,3 +100,16 @@ export default function Nav() {
             type="button"
             className="menu-toggle"
             aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
+      </nav>
+
+      {open && (
+        <div className="mobile-menu" role="menu">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href} onClick={() => setOpen(false)} role="menuitem">
+              {item.label}
