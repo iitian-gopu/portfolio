@@ -127,3 +127,16 @@ export const projects: Project[] = [
     description:
       "Type-safe Twitter clone with Google OAuth, tweets with images, likes and follows — GraphQL API on Node with Prisma + Postgres and a Next.js client.",
     highlights: [
+      "GraphQL API with Prisma ORM on Supabase Postgres",
+      "Redis query caching, JWT auth, Google Sign-In",
+      "Codegen for typed queries, React Query on the client",
+    ],
+    stack: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "Redis", "AWS S3", "Fly.io"],
+    codeUrl: "https://github.com/IITIAN-GOPU20/Twitter-Client",
+    art: "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
+  },
+  {
+    title: "Threads Clone",
+    tag: "MERN · Real-time chat",
+    description:
+      "Threads-style social app with posts, likes, comments, follows, dark mode and a real-time chat with image support and seen/unseen status.",
