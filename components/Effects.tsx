@@ -56,3 +56,14 @@ export default function Effects() {
         <div className="bg-orb two" />
       </div>
       <div className="spotlight" aria-hidden="true" />
+      <button
+        type="button"
+        className={`to-top${showTop ? " show" : ""}`}
+        aria-label="Back to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <ArrowUp size={18} />
+      </button>
+    </>
+  );
+}
