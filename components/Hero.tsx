@@ -82,3 +82,15 @@ export default function Hero() {
       <div className="hero-meta reveal is-visible" aria-label="Highlights">
         {stats.map((s) => (
           <div className="stat" key={s.label}>
+            <strong>{s.value}</strong>
+            <span>{s.label}</span>
+          </div>
+        ))}
+      </div>
+
+      <a className="scroll-hint" href="#about" aria-label="Scroll to about">
+        scroll
+      </a>
+    </section>
+  );
+}
