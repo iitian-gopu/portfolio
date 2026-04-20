@@ -712,3 +712,16 @@ svg {
   animation: scrollhint 1.8s ease-in-out infinite;
 }
 
+@keyframes scrollhint {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    transform-origin: top;
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
