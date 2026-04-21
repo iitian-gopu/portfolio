@@ -113,3 +113,15 @@ export default function Nav() {
           {navItems.map((item) => (
             <a key={item.href} href={item.href} onClick={() => setOpen(false)} role="menuitem">
               {item.label}
+            </a>
+          ))}
+          {site.resumeUrl && (
+            <a href={site.resumeUrl} target="_blank" rel="noopener noreferrer" role="menuitem">
+              Resume ↗
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
