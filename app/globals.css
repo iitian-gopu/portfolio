@@ -725,3 +725,16 @@ svg {
   }
 }
 
+@media (max-width: 860px), (max-height: 860px) {
+  .scroll-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─────────────────────────────────────────────
