@@ -140,3 +140,16 @@ export const projects: Project[] = [
     tag: "MERN · Real-time chat",
     description:
       "Threads-style social app with posts, likes, comments, follows, dark mode and a real-time chat with image support and seen/unseen status.",
+    highlights: [
+      "JWT auth, Cloudinary image uploads",
+      "Socket.io chat with message status & notification sounds",
+      "Fully responsive Chakra UI",
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Chakra UI"],
+    codeUrl: "https://github.com/IITIAN-GOPU20/Threads",
+    art: "linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #0f172a 100%)",
+  },
+  {
+    title: "NaukriChowk",
+    tag: "Job portal",
+    description:
