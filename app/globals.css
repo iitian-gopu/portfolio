@@ -764,3 +764,16 @@ svg {
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.marquee-track span::after {
+  content: "✦";
+  color: var(--accent);
+  font-size: 10px;
+}
+
