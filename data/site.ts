@@ -153,3 +153,16 @@ export const projects: Project[] = [
     title: "NaukriChowk",
     tag: "Job portal",
     description:
+      "A job-listing portal with a separate backend service — search, post and apply for jobs.",
+    highlights: ["Frontend + REST backend split", "Search and filtering of listings"],
+    stack: ["HTML", "CSS", "JavaScript", "Node.js"],
+    codeUrl: "https://github.com/IITIAN-GOPU20/NaukriChowk",
+    art: "linear-gradient(135deg, #facc15 0%, #f97316 100%)",
+  },
+];
+
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  location?: string;
