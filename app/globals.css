@@ -790,3 +790,16 @@ svg {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
+}
+
+.bento > * {
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.b-story {
+  grid-column: span 7;
+}
+
+.b-story p {
