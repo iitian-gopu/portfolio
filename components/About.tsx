@@ -24,3 +24,15 @@ function LocalClock() {
   return <div className="time">{time}</div>;
 }
 
+export default function About() {
+  const current = experience[0];
+  const edu = education[0];
+
+  return (
+    <>
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {[...marquee, ...marquee].map((item, i) => (
+            <span key={`${item}-${i}`}>{item}</span>
+          ))}
+        </div>
