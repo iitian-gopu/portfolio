@@ -22,3 +22,14 @@ export default function Projects() {
 
       <div className="projects-grid">
         {projects.map((project, i) => (
+          <article
+            key={project.title}
+            className={`card project reveal${project.featured ? " featured" : ""}${project.image ? " has-image" : ""}`}
+            style={{ "--art": project.art } as CSSProperties}
+          >
+            <div className="project-art">
+              {project.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className="project-image" src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
+              )}
+              <span className="art-index">{String(i + 1).padStart(2, "0")}</span>
