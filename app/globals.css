@@ -803,3 +803,16 @@ svg {
 }
 
 .b-story p {
+  color: var(--text-2);
+  font-size: 17px;
+}
+
+.b-story p + p {
+  margin-top: 14px;
+}
+
+.b-story .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
