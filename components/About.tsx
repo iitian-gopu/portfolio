@@ -36,3 +36,16 @@ export default function About() {
             <span key={`${item}-${i}`}>{item}</span>
           ))}
         </div>
+      </div>
+
+      <section className="section container" id="about">
+        <div className="section-head reveal">
+          <span className="eyebrow">About</span>
+          <h2>Engineer by training, builder by habit.</h2>
+        </div>
+
+        <div className="bento">
+          <article className="card b-story reveal">
+            <div className="label">Full-stack × Backend × Systems</div>
+            <p>{site.intro}</p>
+            <p>
