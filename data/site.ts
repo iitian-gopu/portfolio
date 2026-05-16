@@ -166,3 +166,16 @@ export type Experience = {
   role: string;
   period: string;
   location?: string;
+  url?: string;
+  summary: string;
+  points: string[];
+  stack: string[];
+};
+
+// TODO: replace the bullet points with your real impact numbers.
+export const experience: Experience[] = [
+  {
+    company: "Goldman Sachs",
+    role: "Software Engineer",
+    period: "2024 — Present",
+    location: "Bengaluru",
