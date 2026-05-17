@@ -33,3 +33,15 @@ export default function Projects() {
                 <img className="project-image" src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
               )}
               <span className="art-index">{String(i + 1).padStart(2, "0")}</span>
+              {!project.image && <span className="art-title">{project.title}</span>}
+              {project.demoVideo && (
+                <button type="button" className="art-play" onClick={() => setActive(project)} aria-label={`Watch ${project.title} demo`}>
+                  <Play size={22} fill="currentColor" />
+                </button>
+              )}
+            </div>
+
+            <div className="project-body">
+              <span className="project-tag">{project.tag}</span>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
