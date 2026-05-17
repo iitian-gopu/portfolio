@@ -829,3 +829,16 @@ svg {
 
 .b-now .company {
   font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.b-now .role {
+  color: var(--text-2);
+}
+
+.b-now .timeline-mini {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
