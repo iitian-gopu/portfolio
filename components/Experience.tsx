@@ -24,3 +24,16 @@ export default function Experience() {
                 ) : (
                   <span className="company">@ {job.company}</span>
                 )}
+                <span className="period">
+                  {job.period}
+                  {job.location ? ` · ${job.location}` : ""}
+                </span>
+              </div>
+              <p className="job-summary">{job.summary}</p>
+              <ul>
+                {job.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <div className="job-stack">
+                {job.stack.map((s) => (
