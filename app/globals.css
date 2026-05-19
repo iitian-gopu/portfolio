@@ -842,3 +842,16 @@ svg {
   margin-top: auto;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-3);
+}
+
+.b-now .timeline-mini div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
