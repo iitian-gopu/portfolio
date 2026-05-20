@@ -49,3 +49,15 @@ export default function About() {
             <div className="label">Full-stack × Backend × Systems</div>
             <p>{site.intro}</p>
             <p>
+              I care about the whole path from idea to production: clear APIs, sensible data models,
+              code that&rsquo;s easy to change, and the tooling that lets a team move fast without breaking things.
+              Outside work I rebuild products I admire — a Figma clone, a Vercel clone, a Twitter clone —
+              to learn how they really work under the hood.
+            </p>
+          </article>
+
+          <article className="card b-now reveal">
+            <div className="b-label">Now</div>
+            <div>
+              <div className="company">{current.company}</div>
+              <div className="role">
