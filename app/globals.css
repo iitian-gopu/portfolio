@@ -855,3 +855,16 @@ svg {
   border-top: 1px dashed var(--border);
 }
 
+.b-now .timeline-mini b {
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.b-edu {
+  grid-column: span 4;
+  background: linear-gradient(160deg, var(--surface-2), transparent), var(--surface);
+}
+
+.b-edu .school {
+  font-family: var(--font-display);
+  font-size: 22px;
