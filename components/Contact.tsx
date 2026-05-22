@@ -32,3 +32,14 @@ export default function Contact() {
 
         <div className="contact-actions">
           <a className="btn btn-primary" href={`mailto:${site.email}?subject=Hello%20Gopal`}>
+            <Mail size={16} /> Say hello <ArrowUpRight size={15} />
+          </a>
+          <a className="btn" href={site.linkedin} target="_blank" rel="noopener noreferrer">
+            <Linkedin size={16} /> LinkedIn
+          </a>
+          <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
+            <Github size={16} /> GitHub
+          </a>
+        </div>
+
+        <button type="button" className={`copy-email${copied ? " copied" : ""}`} onClick={copyEmail}>
