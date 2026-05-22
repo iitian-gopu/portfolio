@@ -45,3 +45,15 @@ export default function Projects() {
               <span className="project-tag">{project.tag}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+              {project.featured && (
+                <ul>
+                  {project.highlights.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+              )}
+              <div className="project-stack">
+                {project.stack.map((s) => (
+                  <span className="chip" key={s}>
+                    {s}
+                  </span>
