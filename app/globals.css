@@ -868,3 +868,16 @@ svg {
 .b-edu .school {
   font-family: var(--font-display);
   font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 40px;
+}
+
+.b-edu .sub {
+  color: var(--text-2);
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.b-edu .badge {
+  position: absolute;
