@@ -179,3 +179,15 @@ export const experience: Experience[] = [
     role: "Software Engineer",
     period: "2024 — Present",
     location: "Bengaluru",
+    url: "https://www.goldmansachs.com",
+    summary:
+      "Engineering in Global Markets — building low-latency, high-reliability systems that the trading floor depends on.",
+    points: [
+      "Design and ship backend services for global markets platforms, with strong emphasis on correctness, observability and resilience.",
+      "Own features end-to-end: requirements with traders and quants, design reviews, implementation, testing and production support.",
+      "Improve performance and reliability of critical data pipelines and APIs.",
+    ],
+    stack: ["Java", "Python", "Distributed Systems", "SQL", "Kafka"],
+  },
+  {
+    company: "PocketPills",
