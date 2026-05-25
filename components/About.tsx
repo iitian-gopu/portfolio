@@ -61,3 +61,16 @@ export default function About() {
             <div>
               <div className="company">{current.company}</div>
               <div className="role">
+                {current.role} · {current.period}
+              </div>
+            </div>
+            <div className="timeline-mini">
+              {experience.slice(1).map((job) => (
+                <div key={job.company}>
+                  <b>
+                    {job.role}, {job.company}
+                  </b>
+                  <span>{job.period}</span>
+                </div>
+              ))}
+            </div>
