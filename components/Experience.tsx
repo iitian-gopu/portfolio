@@ -37,3 +37,16 @@ export default function Experience() {
               </ul>
               <div className="job-stack">
                 {job.stack.map((s) => (
+                  <span className="chip" key={s}>
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </article>
+          </div>
+        ))}
+      </div>
+
+      {education.map((edu) => (
+        <article className="card edu-card reveal" key={edu.school}>
+          <div className="edu-logo">IIT</div>
