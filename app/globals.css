@@ -881,3 +881,16 @@ svg {
 
 .b-edu .badge {
   position: absolute;
+  top: 22px;
+  right: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.b-clock {
+  grid-column: span 4;
+  display: flex;
