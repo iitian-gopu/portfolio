@@ -57,3 +57,14 @@ export default function Projects() {
                   <span className="chip" key={s}>
                     {s}
                   </span>
+                ))}
+              </div>
+              <div className="project-links">
+                {project.demoVideo && (
+                  <button type="button" className="btn btn-primary" onClick={() => setActive(project)}>
+                    <Play size={14} fill="currentColor" /> Watch demo
+                  </button>
+                )}
+                {project.liveUrl && (
+                  <a className={`btn${project.demoVideo ? "" : " btn-primary"}`} href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    Live <ArrowUpRight size={15} />
