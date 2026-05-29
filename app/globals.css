@@ -894,3 +894,16 @@ svg {
 .b-clock {
   grid-column: span 4;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.b-clock .time {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.b-clock .place {
+  color: var(--text-2);
