@@ -74,3 +74,15 @@ export default function About() {
                 </div>
               ))}
             </div>
+          </article>
+
+          <article className="card b-edu reveal">
+            <span className="badge">Class of 2023</span>
+            <GraduationCap size={26} />
+            <div className="school">{edu.short}</div>
+            <div className="sub">{edu.degree}</div>
+          </article>
+
+          <article className="card b-clock reveal">
+            <div className="b-label">Local time</div>
+            <LocalClock />
