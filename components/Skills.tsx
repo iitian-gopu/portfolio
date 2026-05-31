@@ -17,3 +17,12 @@ export default function Skills() {
               {group.skills.map((skill) => (
                 <span className="chip" key={skill}>
                   {skill}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
