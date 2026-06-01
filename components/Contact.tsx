@@ -43,3 +43,14 @@ export default function Contact() {
         </div>
 
         <button type="button" className={`copy-email${copied ? " copied" : ""}`} onClick={copyEmail}>
+          {copied ? <Check size={15} /> : <Copy size={15} />}
+          {copied ? "Copied to clipboard" : site.email}
+        </button>
+      </div>
+
+      <footer className="footer">
+        <span>
+          © {year} {site.name}. Built with Next.js, deployed on Vercel.
+        </span>
+        <div className="links">
+          <a href={site.github} target="_blank" rel="noopener noreferrer">
