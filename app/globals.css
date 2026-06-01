@@ -907,3 +907,16 @@ svg {
 
 .b-clock .place {
   color: var(--text-2);
+}
+
+.b-links {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.b-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
