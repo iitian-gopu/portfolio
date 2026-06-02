@@ -191,3 +191,16 @@ export const experience: Experience[] = [
   },
   {
     company: "PocketPills",
+    role: "SDE-2",
+    period: "2023 — 2024",
+    location: "Remote",
+    url: "https://www.pocketpills.com",
+    summary:
+      "Full-stack engineer at a fast-growing digital pharmacy, owning customer-facing features across web and backend.",
+    points: [
+      "Built and scaled customer-facing features across the web app and backend services.",
+      "Led modules end-to-end — API design, database schema, front-end and rollout.",
+      "Improved reliability and performance of order and prescription flows.",
+    ],
+    stack: ["Node.js", "React", "TypeScript", "PostgreSQL", "AWS"],
+  },
