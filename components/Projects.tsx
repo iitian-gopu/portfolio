@@ -68,3 +68,15 @@ export default function Projects() {
                 {project.liveUrl && (
                   <a className={`btn${project.demoVideo ? "" : " btn-primary"}`} href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     Live <ArrowUpRight size={15} />
+                  </a>
+                )}
+                {project.codeUrl && (
+                  <a className="btn" href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                    <Github size={15} /> Source
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
