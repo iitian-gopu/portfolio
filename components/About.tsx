@@ -86,3 +86,16 @@ export default function About() {
           <article className="card b-clock reveal">
             <div className="b-label">Local time</div>
             <LocalClock />
+            <div className="place">{site.location}</div>
+          </article>
+
+          <article className="card b-links reveal">
+            <div className="b-label">Find me</div>
+            <a href={site.github} target="_blank" rel="noopener noreferrer">
+              <Github size={18} /> GitHub <ArrowUpRight size={16} />
+            </a>
+            <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
+              <Linkedin size={18} /> LinkedIn <ArrowUpRight size={16} />
+            </a>
+            <a href={`mailto:${site.email}`}>
+              <Mail size={18} /> Email <ArrowUpRight size={16} />
