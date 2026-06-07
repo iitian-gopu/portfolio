@@ -50,3 +50,15 @@ export default function Experience() {
       {education.map((edu) => (
         <article className="card edu-card reveal" key={edu.school}>
           <div className="edu-logo">IIT</div>
+          <div>
+            <h3>{edu.school}</h3>
+            <p>
+              {edu.degree} · {edu.detail}
+            </p>
+          </div>
+          <span className="period">{edu.period}</span>
+        </article>
+      ))}
+    </section>
+  );
+}
