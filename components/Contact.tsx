@@ -54,3 +54,14 @@ export default function Contact() {
         </span>
         <div className="links">
           <a href={site.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a href={`mailto:${site.email}`}>Email</a>
+        </div>
+      </footer>
+    </section>
+  );
+}
