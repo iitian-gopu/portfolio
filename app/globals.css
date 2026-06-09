@@ -946,3 +946,16 @@ svg {
   text-transform: uppercase;
   color: var(--text-3);
 }
+
+@media (max-width: 960px) {
+  .b-story,
+  .b-now {
+    grid-column: span 12;
+  }
+  .b-edu,
+  .b-clock,
+  .b-links {
+    grid-column: span 6;
+  }
+}
+
