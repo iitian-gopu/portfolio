@@ -80,3 +80,14 @@ export default function Projects() {
           </article>
         ))}
       </div>
+
+      <div className="github-cta reveal">
+        <a className="btn" href={site.github} target="_blank" rel="noopener noreferrer">
+          <Github size={16} /> More on GitHub <ArrowUpRight size={15} />
+        </a>
+      </div>
+
+      <VideoModal project={active} onClose={() => setActive(null)} />
+    </section>
+  );
+}
