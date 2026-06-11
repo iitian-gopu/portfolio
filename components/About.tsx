@@ -99,3 +99,15 @@ export default function About() {
             </a>
             <a href={`mailto:${site.email}`}>
               <Mail size={18} /> Email <ArrowUpRight size={16} />
+            </a>
+            {site.resumeUrl && (
+              <a href={site.resumeUrl} target="_blank" rel="noopener noreferrer">
+                <FileText size={18} /> Resume <ArrowUpRight size={16} />
+              </a>
+            )}
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
