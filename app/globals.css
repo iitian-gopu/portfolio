@@ -959,3 +959,16 @@ svg {
   }
 }
 
+@media (max-width: 640px) {
+  .bento > * {
+    grid-column: span 12 !important;
+    padding: 22px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Projects
+   ───────────────────────────────────────────── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
