@@ -204,3 +204,16 @@ export const experience: Experience[] = [
     ],
     stack: ["Node.js", "React", "TypeScript", "PostgreSQL", "AWS"],
   },
+  {
+    company: "Edfora",
+    role: "SDE-1",
+    period: "2022 — 2023",
+    location: "Delhi NCR",
+    url: "https://www.edfora.com",
+    summary: "Ed-tech engineering — services and dashboards used by thousands of students every day.",
+    points: [
+      "Developed backend microservices and React dashboards for the learning platform.",
+      "Worked on data-heavy analytics features and CI/CD pipelines.",
+      "Collaborated with product and design to ship weekly.",
+    ],
+    stack: ["Java", "Spring Boot", "React", "MongoDB", "Docker"],
