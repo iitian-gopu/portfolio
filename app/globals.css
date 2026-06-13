@@ -972,3 +972,16 @@ svg {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.project.featured {
+  grid-column: span 2;
+  display: grid;
