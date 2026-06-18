@@ -985,3 +985,16 @@ svg {
 .project.featured {
   grid-column: span 2;
   display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.project-art {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+}
