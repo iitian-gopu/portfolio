@@ -998,3 +998,16 @@ svg {
   min-height: 220px;
   overflow: hidden;
 }
+
+.project-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--art);
+  opacity: 0.85;
+  transition: transform 0.8s var(--ease);
+}
+
+.project:hover .project-art::before {
+  transform: scale(1.05);
+}
