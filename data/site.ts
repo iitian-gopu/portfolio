@@ -217,3 +217,16 @@ export const experience: Experience[] = [
       "Collaborated with product and design to ship weekly.",
     ],
     stack: ["Java", "Spring Boot", "React", "MongoDB", "Docker"],
+  },
+];
+
+export const education = [
+  {
+    school: "Indian Institute of Technology (BHU), Varanasi",
+    short: "IIT (BHU) Varanasi",
+    degree: "Bachelor of Technology", // TODO: add your branch, e.g. "B.Tech, Computer Science & Engineering"
+    period: "2019 — 2023",
+    detail:
+      "Four years in Varanasi — coursework in algorithms, systems and software engineering, and a lot of late nights building things.",
+    url: "https://iitbhu.ac.in",
+  },
