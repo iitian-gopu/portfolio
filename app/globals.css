@@ -1024,3 +1024,16 @@ svg {
 
 .project-art .art-title {
   position: absolute;
+  left: 24px;
+  bottom: 20px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.project-art .art-index {
+  position: absolute;
