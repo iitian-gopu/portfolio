@@ -23,3 +23,15 @@ function HeroVideo() {
 
     const stopReverse = () => {
       if (timer) clearInterval(timer);
+      timer = undefined;
+    };
+
+    const onEnded = () => {
+      stopReverse();
+      last = performance.now();
+      timer = setInterval(() => {
+        const now = performance.now();
+        const dt = (now - last) / 1000;
+        last = now;
+        if (video.currentTime <= 0.06) {
+          stopReverse();
