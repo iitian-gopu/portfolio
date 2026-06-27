@@ -230,3 +230,16 @@ export const education = [
       "Four years in Varanasi — coursework in algorithms, systems and software engineering, and a lot of late nights building things.",
     url: "https://iitbhu.ac.in",
   },
+];
+
+export const skillGroups = [
+  {
+    title: "Languages",
+    skills: ["TypeScript", "JavaScript", "Java", "Python", "C++", "SQL", "Go"],
+  },
+  {
+    title: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS", "Redux", "React Query", "Chakra UI", "shadcn/ui"],
+  },
+  {
+    title: "Backend",
