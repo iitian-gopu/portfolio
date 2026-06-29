@@ -35,3 +35,15 @@ function HeroVideo() {
         last = now;
         if (video.currentTime <= 0.06) {
           stopReverse();
+          // wait for the seek to settle before playing, or play() gets interrupted
+          video.addEventListener("seeked", () => void video.play().catch(() => {}), { once: true });
+          video.currentTime = 0;
+          return;
+        }
+        video.currentTime = Math.max(0, video.currentTime - dt);
+      }, 33);
+    };
+
+    video.addEventListener("ended", onEnded);
+    return () => {
+      video.removeEventListener("ended", onEnded);
