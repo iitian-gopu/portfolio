@@ -20,3 +20,14 @@ export default function VideoModal({ project, onClose }: Props) {
   }, [project, onClose]);
 
   if (!project?.demoVideo) return null;
+
+  return (
+    <div className="modal-backdrop" role="presentation" onMouseDown={onClose}>
+      <div
+        className="video-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="video-modal-title"
+        onMouseDown={(e) => e.stopPropagation()}
+      >
+        <div className="video-modal-head">
