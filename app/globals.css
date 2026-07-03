@@ -1089,3 +1089,16 @@ svg {
 
 .project-body li::before {
   content: "→";
+  color: var(--accent);
+  flex: none;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-stack .chip {
+  padding: 4px 10px;
+  font-size: 12px;
