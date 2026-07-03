@@ -47,3 +47,16 @@ function HeroVideo() {
     video.addEventListener("ended", onEnded);
     return () => {
       video.removeEventListener("ended", onEnded);
+      stopReverse();
+    };
+  }, []);
+
+  return (
+    <div className="hero-media" aria-label="Animated developer workspace">
+      <video
+        ref={videoRef}
+        className="hero-video"
+        src={site.heroVideo}
+        poster={site.heroPoster}
+        autoPlay
+        muted
