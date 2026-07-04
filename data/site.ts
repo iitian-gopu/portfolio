@@ -243,3 +243,16 @@ export const skillGroups = [
   },
   {
     title: "Backend",
+    skills: ["Node.js", "Express", "GraphQL", "Spring Boot", "Prisma", "REST APIs", "WebSockets"],
+  },
+  {
+    title: "Data & Infra",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "Docker", "AWS (ECS, S3, EC2)", "CI/CD"],
+  },
+  {
+    title: "Practices",
+    skills: ["System Design", "Low-Level Design", "DSA", "Microservices", "Testing", "Observability"],
+  },
+];
+
+/** Shown in the scrolling marquee strip */
