@@ -60,3 +60,15 @@ function HeroVideo() {
         poster={site.heroPoster}
         autoPlay
         muted
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+      />
+      <div className="hero-media-vignette" aria-hidden="true" />
+    </div>
+  );
+}
+
+/**
+ * Photo variant (site.photo): a still image turned into a "living" clip —
+ * slow Ken Burns zoom/pan, cursor parallax and a light sweep, under the same
