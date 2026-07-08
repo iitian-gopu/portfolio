@@ -1128,3 +1128,16 @@ svg {
   }
   .project.featured {
     grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Experience timeline
+   ───────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
