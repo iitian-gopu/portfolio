@@ -31,3 +31,14 @@ export default function VideoModal({ project, onClose }: Props) {
         onMouseDown={(e) => e.stopPropagation()}
       >
         <div className="video-modal-head">
+          <div>
+            <span className="project-tag">{project.tag}</span>
+            <h3 id="video-modal-title">{project.title}</h3>
+          </div>
+          <button type="button" className="btn btn-icon" onClick={onClose} aria-label="Close video">
+            <X size={18} />
+          </button>
+        </div>
+        <video
+          key={project.demoVideo}
+          className="video-modal-player"
