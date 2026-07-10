@@ -1141,3 +1141,15 @@ svg {
   flex-direction: column;
   gap: 18px;
 }
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--border) 30%, var(--border) 70%, transparent);
+}
+
+.job {
