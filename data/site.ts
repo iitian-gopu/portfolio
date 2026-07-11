@@ -256,3 +256,16 @@ export const skillGroups = [
 ];
 
 /** Shown in the scrolling marquee strip */
+export const marquee = [
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "GraphQL",
+  "PostgreSQL",
+  "Redis",
+  "Kafka",
+  "Docker",
+  "AWS",
+  "Java",
+  "Spring Boot",
