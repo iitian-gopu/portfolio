@@ -72,3 +72,15 @@ function HeroVideo() {
 /**
  * Photo variant (site.photo): a still image turned into a "living" clip —
  * slow Ken Burns zoom/pan, cursor parallax and a light sweep, under the same
+ * soft mask as the video so it blends into the page.
+ */
+function HeroPhoto() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  function onMove(e: React.PointerEvent<HTMLDivElement>) {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    el.style.setProperty("--px", `${x * -14}px`);
