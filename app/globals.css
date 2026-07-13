@@ -1153,3 +1153,16 @@ svg {
 }
 
 .job {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 22px;
+}
+
+.job-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
