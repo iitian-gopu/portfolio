@@ -1166,3 +1166,16 @@ svg {
   place-items: center;
   border: 1px solid var(--border-strong);
   background: var(--bg);
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.job:first-child .job-dot {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 0 6px var(--glow-1);
+}
+
