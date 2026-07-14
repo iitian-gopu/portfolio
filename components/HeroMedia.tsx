@@ -84,3 +84,15 @@ function HeroPhoto() {
     const x = (e.clientX - r.left) / r.width - 0.5;
     const y = (e.clientY - r.top) / r.height - 0.5;
     el.style.setProperty("--px", `${x * -14}px`);
+    el.style.setProperty("--py", `${y * -10}px`);
+    el.style.setProperty("--rx", `${y * -4}deg`);
+    el.style.setProperty("--ry", `${x * 6}deg`);
+  }
+
+  function onLeave() {
+    const el = ref.current;
+    if (!el) return;
+    ["--px", "--py", "--rx", "--ry"].forEach((v) => el.style.removeProperty(v));
+  }
+
+  return (
