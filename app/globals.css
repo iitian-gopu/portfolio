@@ -1179,3 +1179,16 @@ svg {
   box-shadow: 0 0 0 6px var(--glow-1);
 }
 
+.job-card {
+  padding: 26px 28px;
+}
+
+.job-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.job-top h3 {
