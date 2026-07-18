@@ -42,3 +42,13 @@ export default function VideoModal({ project, onClose }: Props) {
         <video
           key={project.demoVideo}
           className="video-modal-player"
+          src={project.demoVideo}
+          controls
+          autoPlay
+          playsInline
+          preload="metadata"
+        />
+      </div>
+    </div>
+  );
+}
