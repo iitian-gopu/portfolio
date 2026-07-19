@@ -269,3 +269,15 @@ export const marquee = [
   "AWS",
   "Java",
   "Spring Boot",
+  "Python",
+  "System Design",
+];
+
+export const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
+
