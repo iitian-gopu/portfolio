@@ -1192,3 +1192,16 @@ svg {
 }
 
 .job-top h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.job-top .company {
+  color: var(--accent);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.job-top .period {
