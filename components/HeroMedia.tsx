@@ -96,3 +96,15 @@ function HeroPhoto() {
   }
 
   return (
+    <div className="hero-photo-scene" ref={ref} onPointerMove={onMove} onPointerLeave={onLeave}>
+      <div className="hero-media hero-photo" aria-label={`Photo of ${site.name}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="hero-photo-img" src={site.photo} alt={site.name} />
+        <div className="hero-photo-sweep" aria-hidden="true" />
+        <div className="hero-media-vignette" aria-hidden="true" />
+      </div>
+      <span className="hero-badge hero-badge-a">IIT (BHU) &rsquo;23</span>
+      <span className="hero-badge hero-badge-b">Goldman Sachs</span>
+    </div>
+  );
+}
