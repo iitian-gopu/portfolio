@@ -1205,3 +1205,16 @@ svg {
 }
 
 .job-top .period {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-3);
+  letter-spacing: 0.08em;
+}
+
+.job-summary {
+  color: var(--text-2);
+  margin-bottom: 14px;
+}
+
+.job-card ul {
