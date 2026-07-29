@@ -1231,3 +1231,16 @@ svg {
 .job-card li {
   display: flex;
   gap: 10px;
+}
+
+.job-card li::before {
+  content: "▹";
+  color: var(--accent);
+  flex: none;
+}
+
+.job-stack {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
