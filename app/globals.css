@@ -1244,3 +1244,16 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+@media (max-width: 640px) {
+  .timeline::before {
+    display: none;
+  }
+  .job {
+    grid-template-columns: 1fr;
+  }
+  .job-dot {
+    display: none;
+  }
+  .job-top .period {
