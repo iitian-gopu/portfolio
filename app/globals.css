@@ -1257,3 +1257,16 @@ svg {
     display: none;
   }
   .job-top .period {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Education strip */
+.edu-card {
+  margin-top: 40px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
