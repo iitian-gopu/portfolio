@@ -11,3 +11,16 @@ export default function OpenGraphImage() {
       <div
         style={{
           width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          padding: 72,
+          background: "linear-gradient(135deg, #0a0a0f 0%, #16121f 60%, #1f1630 100%)",
+          color: "#f2f2f5",
+          fontFamily: "sans-serif",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
