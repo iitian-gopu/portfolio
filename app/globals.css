@@ -1283,3 +1283,16 @@ svg {
   color: var(--bg);
   font-family: var(--font-display);
   font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+}
+
+.edu-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.edu-card p {
+  color: var(--text-2);
+  margin-top: 4px;
+}
