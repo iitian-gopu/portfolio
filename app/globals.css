@@ -1296,3 +1296,16 @@ svg {
   color: var(--text-2);
   margin-top: 4px;
 }
+
+.edu-card .period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+@media (max-width: 640px) {
+  .edu-card {
+    grid-template-columns: auto 1fr;
+  }
+  .edu-card .period {
+    grid-column: 2;
