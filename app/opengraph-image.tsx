@@ -24,3 +24,16 @@ export default function OpenGraphImage() {
       >
         <div
           style={{
+            position: "absolute",
+            right: -120,
+            top: -160,
+            width: 520,
+            height: 520,
+            borderRadius: 999,
+            background: "rgba(245,166,35,0.35)",
+            filter: "blur(120px)",
+          }}
+        />
+        <div
+          style={{
+            display: "flex",
