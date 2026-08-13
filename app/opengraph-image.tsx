@@ -37,3 +37,16 @@ export default function OpenGraphImage() {
         <div
           style={{
             display: "flex",
+            alignItems: "center",
+            gap: 16,
+            fontSize: 24,
+            color: "#b4b4c2",
+          }}
+        >
+          <div
+            style={{
+              width: 44,
+              height: 44,
+              borderRadius: 12,
+              background: "linear-gradient(135deg, #f5a623, #a78bfa)",
+              color: "#0a0a0f",
