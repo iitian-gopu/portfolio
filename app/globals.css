@@ -1374,3 +1374,16 @@ svg {
   max-width: 560px;
   color: var(--text-2);
   font-size: 17px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.copy-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
