@@ -50,3 +50,16 @@ export default function OpenGraphImage() {
               borderRadius: 12,
               background: "linear-gradient(135deg, #f5a623, #a78bfa)",
               color: "#0a0a0f",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: 800,
+              fontSize: 18,
+            }}
+          >
+            {site.initials}
+          </div>
+          Software Engineer @ Goldman Sachs · IIT (BHU) &rsquo;23
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
