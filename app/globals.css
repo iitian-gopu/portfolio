@@ -1387,3 +1387,16 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-2);
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px dashed var(--border-strong);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.copy-email:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
