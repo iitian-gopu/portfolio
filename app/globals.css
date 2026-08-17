@@ -1400,3 +1400,16 @@ svg {
   border-color: var(--accent);
   color: var(--text);
 }
+
+.copy-email.copied {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+}
+
+/* ─────────────────────────────────────────────
+   Footer
+   ───────────────────────────────────────────── */
+.footer {
+  padding: 32px 0 40px;
+  border-top: 1px solid var(--border);
+  display: flex;
