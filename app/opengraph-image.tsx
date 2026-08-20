@@ -63,3 +63,16 @@ export default function OpenGraphImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <div style={{ fontSize: 104, fontWeight: 800, letterSpacing: -5, lineHeight: 1 }}>{site.name}</div>
+          <div style={{ fontSize: 34, color: "#b4b4c2", maxWidth: 900 }}>{site.tagline}</div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: "#7c7c8f" }}>
+          <span>{site.siteUrl.replace(/^https?:\/\//, "")}</span>
+          <span>{site.github.replace(/^https?:\/\//, "")}</span>
+        </div>
+      </div>
+    ),
+    size,
+  );
+}
