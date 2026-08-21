@@ -1439,3 +1439,16 @@ svg {
   height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border-strong);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s var(--ease);
+  pointer-events: none;
+}
+
+.to-top.show {
+  opacity: 1;
