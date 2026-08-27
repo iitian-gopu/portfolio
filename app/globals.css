@@ -1491,3 +1491,16 @@ svg {
   /* soft mask so the clip blends into the page instead of looking like a player */
   mask-image: radial-gradient(ellipse 78% 78% at 50% 50%, #000 55%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 50%, #000 55%, transparent 100%);
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.hero-media-vignette {
+  position: absolute;
