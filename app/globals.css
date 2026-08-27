@@ -1478,3 +1478,16 @@ svg {
   gap: clamp(28px, 5vw, 64px);
   align-items: center;
 }
+
+.hero-media-col {
+  position: relative;
+}
+
+.hero-media {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 28px;
+  overflow: hidden;
+  /* soft mask so the clip blends into the page instead of looking like a player */
+  mask-image: radial-gradient(ellipse 78% 78% at 50% 50%, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 78% at 50% 50%, #000 55%, transparent 100%);
