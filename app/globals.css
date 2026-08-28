@@ -1504,3 +1504,16 @@ svg {
 
 .hero-media-vignette {
   position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 70% at 50% 50%, transparent 55%, var(--bg) 100%),
+    linear-gradient(180deg, transparent 70%, var(--bg) 100%);
+  opacity: 0.85;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-media-col {
