@@ -1517,3 +1517,16 @@ svg {
     grid-template-columns: 1fr;
   }
   .hero-media-col {
+    order: -1;
+  }
+  .hero-media {
+    aspect-ratio: 16 / 10;
+    max-height: 340px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Project images, play button, video modal
+   ───────────────────────────────────────────── */
+.project-image {
+  position: absolute;
