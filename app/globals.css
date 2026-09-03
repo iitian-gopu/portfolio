@@ -1543,3 +1543,16 @@ svg {
   transform: scale(1.04);
 }
 
+.project.has-image .project-art::after {
+  display: none;
+}
+
+.project.has-image .project-art::before {
+  opacity: 1;
+}
+
+.art-play {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
