@@ -22,3 +22,14 @@ Built with Next.js 16 (App Router), React 19 and TypeScript. No UI framework, no
 ```bash
 npm install
 npm run dev
+```
+
+Open http://localhost:3000.
+
+## Personalise
+
+Everything lives in **`data/site.ts`** — name, links, stats, projects, experience, education, skills and the marquee. Search for `TODO` to find the items that still need your input:
+
+| Item | Where |
+| --- | --- |
+| Resume | Drop `resume.pdf` into `public/` (or set `resumeUrl: ""` to hide the button) |
