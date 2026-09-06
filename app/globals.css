@@ -1569,3 +1569,16 @@ svg {
 
 .art-play:hover {
   transform: scale(1.08);
+  background: var(--accent);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: var(--gutter);
+  background: rgba(5, 5, 10, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
