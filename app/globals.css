@@ -1582,3 +1582,16 @@ svg {
   background: rgba(5, 5, 10, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  animation: fade 0.2s ease;
+}
+
+.video-modal {
+  width: min(100%, 1040px);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  animation: pop 0.25s var(--ease);
+}
+
