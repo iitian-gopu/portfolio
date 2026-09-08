@@ -1595,3 +1595,16 @@ svg {
   animation: pop 0.25s var(--ease);
 }
 
+.video-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.video-modal-head h3 {
+  font-size: 20px;
+  margin-top: 4px;
+}
