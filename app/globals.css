@@ -1608,3 +1608,16 @@ svg {
   font-size: 20px;
   margin-top: 4px;
 }
+
+.video-modal-player {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  background: #000;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
