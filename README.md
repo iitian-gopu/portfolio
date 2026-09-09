@@ -33,3 +33,15 @@ Everything lives in **`data/site.ts`** — name, links, stats, projects, experie
 | Item | Where |
 | --- | --- |
 | Resume | Drop `resume.pdf` into `public/` (or set `resumeUrl: ""` to hide the button) |
+| **Your photo** | Drop it at `public/media/gopal.jpg` and set `photo: "/media/gopal.jpg"` — replaces the video |
+| Hero video | Replace `public/media/hero-ai.mp4` + `hero-poster.png` (or set `heroVideo: ""` to hide) |
+| Project demos | Put MP4s in `public/demos/`, set `demoVideo` on the project |
+| Project screenshots | Put images in `public/projects/`, set `image` on the project |
+| Live site URL | `site.siteUrl` — used for Open Graph, sitemap and JSON-LD |
+| Location | `site.location` |
+| Degree / branch | `education[0].degree` |
+| Experience bullets | `experience[*].points` — replace with real impact numbers |
+
+Colours, fonts and spacing are CSS variables at the top of `app/globals.css` (`:root` for dark, `:root[data-theme="light"]` for light).
+
+## Deploy to Vercel
