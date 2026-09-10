@@ -1621,3 +1621,16 @@ svg {
     opacity: 0;
   }
 }
+
+/* ─────────────────────────────────────────────
+   Hero photo as a "living" clip (site.photo)
+   ───────────────────────────────────────────── */
+.hero-photo-scene {
+  position: relative;
+  perspective: 1200px;
+}
+
+.hero-photo {
+  aspect-ratio: 4 / 3;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.6s var(--ease);
