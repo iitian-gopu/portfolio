@@ -45,3 +45,15 @@ Everything lives in **`data/site.ts`** — name, links, stats, projects, experie
 Colours, fonts and spacing are CSS variables at the top of `app/globals.css` (`:root` for dark, `:root[data-theme="light"]` for light).
 
 ## Deploy to Vercel
+
+1. Push this repo to GitHub.
+2. Go to [vercel.com/new](https://vercel.com/new), import the repo, keep the defaults (framework: Next.js) and click **Deploy**.
+3. Copy the URL Vercel gives you into `site.siteUrl` in `data/site.ts` and push again.
+
+Every push to `main` redeploys automatically.
+
+## Project structure
+
+```
+app/
+  layout.tsx          fonts, metadata, theme bootstrap, JSON-LD
