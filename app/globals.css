@@ -1647,3 +1647,16 @@ svg {
   animation: kenburns 24s ease-in-out infinite alternate;
   translate: var(--px, 0) var(--py, 0);
   transition: translate 0.6s var(--ease);
+  filter: saturate(1.05) contrast(1.03);
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.08) translate(0, 0);
+  }
+  to {
+    transform: scale(1.22) translate(-2.5%, -3%);
+  }
+}
+
+.hero-photo-sweep {
