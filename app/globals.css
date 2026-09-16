@@ -1660,3 +1660,16 @@ svg {
 }
 
 .hero-photo-sweep {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.16) 50%, transparent 60%);
+  animation: sweep 9s ease-in-out infinite;
+  mix-blend-mode: soft-light;
+}
+
+@keyframes sweep {
+  0%,
+  35% {
+    transform: translateX(-60%);
+  }
