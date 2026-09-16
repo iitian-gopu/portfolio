@@ -1673,3 +1673,16 @@ svg {
   35% {
     transform: translateX(-60%);
   }
+  65%,
+  100% {
+    transform: translateX(60%);
+  }
+}
+
+.hero-badge {
+  position: absolute;
+  z-index: 2;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
