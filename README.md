@@ -57,3 +57,14 @@ Every push to `main` redeploys automatically.
 ```
 app/
   layout.tsx          fonts, metadata, theme bootstrap, JSON-LD
+  page.tsx            section order
+  globals.css         design tokens + all styles
+  opengraph-image.tsx social preview image
+  sitemap.ts, robots.ts
+components/
+  Nav, Hero, About, Projects, Experience, Skills, Contact, Effects, Icons
+data/
+  site.ts             ← all content
+public/
+  favicon.svg         (add resume.pdf here)
+```
