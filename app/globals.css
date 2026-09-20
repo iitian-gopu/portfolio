@@ -1169,7 +1169,45 @@ svg {
   margin-top: auto;
   padding-top: 6px;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.project-toggle {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  padding: 2px 0;
+  border-bottom: 1px solid var(--border-strong);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-toggle svg {
+  transition: transform 0.25s var(--ease);
+}
+
+.project-toggle.open svg {
+  transform: rotate(180deg);
+}
+
+.project-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip-more {
+  cursor: pointer;
+  border-style: dashed;
+  color: var(--text-3);
+}
+
+.chip-more:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .project-links .btn {
@@ -1816,7 +1854,23 @@ svg {
 }
 
 .project.has-image .project-art::after {
+  background: linear-gradient(180deg, rgba(0, 4, 21, 0) 40%, rgba(0, 4, 21, 0.85) 100%);
+}
+
+.project.has-image .project-image {
+  object-position: left top;
+}
+
+.project.has-image .art-icon {
   display: none;
+}
+
+.project.has-image .art-play {
+  top: 16px;
+  right: 16px;
+  bottom: auto;
+  width: 46px;
+  height: 46px;
 }
 
 .project.has-image .project-art::before {

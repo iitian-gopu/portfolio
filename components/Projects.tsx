@@ -6,6 +6,7 @@ import {
   Bot,
   Briefcase,
   ChartCandlestick,
+  ChevronDown,
   ChevronRight,
   MessageCircle,
   MessagesSquare,
@@ -38,7 +39,7 @@ function ProjectArt({ project, index, onPlay }: { project: Project; index: numbe
       )}
       <span className="art-index">{String(index + 1).padStart(2, "0")}</span>
       {Icon && <Icon className="art-icon" strokeWidth={1.4} aria-hidden="true" />}
-      {!project.image && project.flow && (
+      {project.flow && (
         <div className="art-flow" aria-label={`${project.title} architecture`}>
           {project.flow.map((step, i) => (
             <span key={step} className="art-step">
@@ -79,10 +80,15 @@ function ProjectLinks({ project, onPlay }: { project: Project; onPlay: () => voi
   );
 }
 
+const COLLAPSED_HIGHLIGHTS = 2;
+const COLLAPSED_CHIPS = 6;
+
 export default function Projects() {
   const [active, setActive] = useState<Project | null>(null);
+  const [open, setOpen] = useState<Record<string, boolean>>({});
   const featured = projects.filter((p) => p.featured);
   const more = projects.filter((p) => !p.featured);
+  const toggle = (title: string) => setOpen((o) => ({ ...o, [title]: !o[title] }));
 
   return (
     <section className="section container" id="work">
@@ -107,18 +113,44 @@ export default function Projects() {
               <span className="project-tag">{project.tag}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <ul>
-                {project.highlights.map((h) => (
-                  <li key={h}>{h}</li>
-                ))}
-              </ul>
-              <div className="project-stack">
-                {project.stack.map((s) => (
-                  <span className="chip" key={s}>
-                    {s}
-                  </span>
-                ))}
-              </div>
+              {(() => {
+                const expanded = !!open[project.title];
+                const hidden = project.highlights.length - COLLAPSED_HIGHLIGHTS;
+                const chips = expanded ? project.stack : project.stack.slice(0, COLLAPSED_CHIPS);
+                const moreChips = project.stack.length - chips.length;
+                return (
+                  <>
+                    <ul>
+                      {(expanded ? project.highlights : project.highlights.slice(0, COLLAPSED_HIGHLIGHTS)).map((h) => (
+                        <li key={h}>{h}</li>
+                      ))}
+                    </ul>
+                    <div className="project-stack">
+                      {chips.map((s) => (
+                        <span className="chip" key={s}>
+                          {s}
+                        </span>
+                      ))}
+                      {moreChips > 0 && (
+                        <button type="button" className="chip chip-more" onClick={() => toggle(project.title)}>
+                          +{moreChips} more
+                        </button>
+                      )}
+                    </div>
+                    {(hidden > 0 || moreChips > 0) && (
+                      <button
+                        type="button"
+                        className={`project-toggle${expanded ? " open" : ""}`}
+                        onClick={() => toggle(project.title)}
+                        aria-expanded={expanded}
+                      >
+                        {expanded ? "Less details" : `More details`}
+                        <ChevronDown size={14} aria-hidden="true" />
+                      </button>
+                    )}
+                  </>
+                );
+              })()}
               <ProjectLinks project={project} onPlay={() => setActive(project)} />
             </div>
           </article>

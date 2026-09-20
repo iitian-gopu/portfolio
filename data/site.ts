@@ -77,6 +77,8 @@ export const projects: Project[] = [
     flow: ["Request", "LLM router", "8 agents", "RAG · Qdrant", "Response"],
     liveUrl: "https://visionai-frontend-hvi0.onrender.com",
     codeUrl: "https://github.com/iitian-gopu/visionai",
+    image: "/projects/visionai.jpg",
+    demoVideo: "/demos/visionai.mp4",
     art: "linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #0ea5e9 100%)",
     featured: true,
   },
