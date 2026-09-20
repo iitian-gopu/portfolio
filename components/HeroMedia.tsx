@@ -18,35 +18,61 @@ function HeroVideo() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    let timer: ReturnType<typeof setInterval> | undefined;
+    let raf = 0;
     let last = 0;
+    let reversing = false;
+    let visible = true;
 
     const stopReverse = () => {
-      if (timer) clearInterval(timer);
-      timer = undefined;
+      cancelAnimationFrame(raf);
+      raf = 0;
+      reversing = false;
     };
 
-    const onEnded = () => {
-      stopReverse();
-      last = performance.now();
-      timer = setInterval(() => {
-        const now = performance.now();
-        const dt = (now - last) / 1000;
+    // Reverse by seeking backwards ~24 times a second. Seeking is the expensive
+    // part, so it only runs while the hero is actually on screen.
+    const step = (now: number) => {
+      if (!reversing) return;
+      const dt = (now - last) / 1000;
+      if (dt >= 1 / 24) {
         last = now;
         if (video.currentTime <= 0.06) {
           stopReverse();
-          // wait for the seek to settle before playing, or play() gets interrupted
           video.addEventListener("seeked", () => void video.play().catch(() => {}), { once: true });
           video.currentTime = 0;
           return;
         }
         video.currentTime = Math.max(0, video.currentTime - dt);
-      }, 33);
+      }
+      raf = requestAnimationFrame(step);
     };
+
+    const onEnded = () => {
+      if (!visible) return;
+      stopReverse();
+      reversing = true;
+      last = performance.now();
+      raf = requestAnimationFrame(step);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        if (!visible) {
+          stopReverse();
+          video.pause();
+        } else if (video.paused) {
+          void video.play().catch(() => {});
+        }
+      },
+      { threshold: 0.1 },
+    );
+    io.observe(video);
 
     video.addEventListener("ended", onEnded);
     return () => {
       video.removeEventListener("ended", onEnded);
+      io.disconnect();
       stopReverse();
     };
   }, []);

@@ -15,7 +15,7 @@ export const site = {
   roles: ["Full-Stack Engineer", "AI Engineer", "Quant Systems Builder", "Backend Engineer"],
   tagline: "I build fast, reliable software — from real-time UIs and distributed backends to LLM agents and algorithmic trading systems.",
   intro:
-    "Software Engineer at Goldman Sachs and a 2023 graduate of IIT (BHU) Varanasi. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and I like taking ambiguous problems all the way to something that runs reliably in production.",
+    "Software Engineer at Goldman Sachs, IIT (BHU) Varanasi ’23. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and take ambiguous problems all the way to something that runs reliably.",
   location: "Bengaluru, India", // TODO: confirm
   timezone: "Asia/Kolkata",
   availability: "Open to interesting conversations",
@@ -54,6 +54,10 @@ export type Project = {
   /** CSS gradient used as the card artwork when there is no image */
   art: string;
   featured?: boolean;
+  /** Icon key rendered on the card artwork (see components/Projects.tsx) */
+  icon?: "bot" | "chart" | "pen" | "rocket" | "message" | "threads" | "briefcase";
+  /** Mini architecture pipeline drawn on the card artwork */
+  flow?: string[];
 };
 
 export const projects: Project[] = [
@@ -61,16 +65,16 @@ export const projects: Project[] = [
     title: "VisionAI",
     tag: "Multi-agent GenAI platform · LangGraph",
     description:
-      "A production-style AI workspace that routes each request to a specialized agent — chat, web search, coding, PDF RAG, PDF/PPT generation, image generation and image analysis — orchestrated with LangGraph.",
+      "A production-style AI workspace that routes every request to the right specialist — chat, web search, coding, PDF RAG, document generation, image generation and vision — orchestrated with LangGraph.",
     highlights: [
       "LangGraph state machine with an LLM classifier routing across 8 specialized agents",
-      "RAG pipeline: PDF parsing → text splitting → Gemini embeddings → Qdrant vector search",
-      "Multi-provider LLM layer (Gemini 2.5, Groq, OpenRouter) with Tavily web search and multimodal image understanding",
-      "Monaco code artifacts with a sandboxed live HTML/CSS/JS preview",
-      "Firebase auth, Redis sessions & memory, Razorpay credits, per-agent rate limiting",
-      "Dockerized Node microservices on AWS ECS/ECR, React on S3 + CloudFront via GitHub Actions",
+      "RAG pipeline: PDF parsing → chunking → Gemini embeddings → Qdrant vector search",
+      "Multi-provider LLM layer (Gemini 2.5, Groq, OpenRouter) + Tavily search + multimodal vision",
+      "Firebase auth, Redis memory, Razorpay credits; Dockerized microservices on AWS ECS via GitHub Actions",
     ],
-    stack: ["LangGraph", "LangChain", "Gemini", "Groq", "OpenRouter", "Qdrant", "Tavily", "React", "Node.js", "Express", "Redis", "MongoDB", "Docker", "AWS"],
+    stack: ["LangGraph", "LangChain", "Gemini", "Groq", "Qdrant", "React", "Node.js", "Redis", "AWS"],
+    icon: "bot",
+    flow: ["Request", "LLM router", "8 agents", "RAG · Qdrant", "Response"],
     liveUrl: "https://visionai-frontend-hvi0.onrender.com",
     codeUrl: "https://github.com/iitian-gopu/visionai",
     art: "linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #0ea5e9 100%)",
@@ -80,16 +84,16 @@ export const projects: Project[] = [
     title: "Algo Platform",
     tag: "Quant platform · Python monorepo",
     description:
-      "A multi-asset, India-first algorithmic trading platform for mid-frequency strategies (1-minute to daily) — one monorepo covering the full path from raw market data to live orders, with backtest and live guaranteed to see identical data.",
+      "A multi-asset, India-first systematic trading platform (1-minute to daily) — one monorepo from raw market data to live orders, with backtest and live guaranteed to see identical data.",
     highlights: [
-      "11 Python packages: market-data ingest (REST + WebSocket broker feeds), feature engineering, event-driven backtest, research, risk, paper/live trading",
-      "Columnar data layer on Parquet / PyArrow with DuckDB queries; Pydantic + pandera schema contracts at every boundary",
-      "Research loop: strategy library, walk-forward validation and Optuna hyperparameter sweeps with scikit-learn models",
-      "Risk layer with refusal gates, position/exposure limits, VaR and a kill-switch wired to operator alerts",
-      "Cron-dispatched orchestrator with run journal, run locks, retry ladders and evidence gates — no external scheduler",
-      "Spec-driven engineering: per-package SPEC.md, 60+ ADRs, Hypothesis property tests, mypy/ruff, pre-commit and duplication gates",
+      "11 Python packages: REST/WebSocket market-data ingest, feature engineering, event-driven backtest, research, risk, paper & live trading",
+      "Parquet / PyArrow data layer with DuckDB queries; Pydantic + pandera schema contracts at every boundary",
+      "Walk-forward research with Optuna sweeps; risk layer with exposure limits, VaR and a kill-switch wired to alerts",
+      "Spec-driven: per-package SPEC.md, 60+ ADRs, Hypothesis property tests, mypy/ruff and pre-commit gates",
     ],
-    stack: ["Python", "pandas", "NumPy", "SciPy", "PyArrow / Parquet", "DuckDB", "Pydantic", "scikit-learn", "Optuna", "websockets", "Streamlit", "pytest + Hypothesis", "uv"],
+    stack: ["Python", "pandas", "NumPy", "PyArrow", "DuckDB", "Pydantic", "scikit-learn", "Optuna", "Streamlit"],
+    icon: "chart",
+    flow: ["Market data", "Features", "Backtest", "Risk gates", "Live orders"],
     codeUrl: "https://github.com/iitian-gopu/algo-platform",
     art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
     featured: true,
@@ -107,6 +111,8 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Liveblocks", "Fabric.js", "Tailwind", "shadcn/ui"],
     liveUrl: "https://fig-forge.vercel.app",
     codeUrl: "https://github.com/iitian-gopu/FigForge",
+    icon: "pen",
+    flow: ["Canvas", "Liveblocks", "Multiplayer"],
     art: "linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%)",
     featured: true,
   },
@@ -122,6 +128,8 @@ export const projects: Project[] = [
     ],
     stack: ["Node.js", "Express", "Next.js", "Docker", "AWS ECS", "S3", "Kafka", "Redis", "Socket.IO"],
     codeUrl: "https://github.com/iitian-gopu/vercel-clone",
+    icon: "rocket",
+    flow: ["git push", "Build · ECS", "S3", "Proxy", "Live URL"],
     art: "linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #1e1b4b 100%)",
     featured: true,
   },
@@ -137,6 +145,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "Redis", "AWS S3", "Fly.io"],
     codeUrl: "https://github.com/IITIAN-GOPU20/Twitter-Client",
+    icon: "message",
     art: "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
   },
   {
@@ -151,6 +160,7 @@ export const projects: Project[] = [
     ],
     stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Chakra UI"],
     codeUrl: "https://github.com/IITIAN-GOPU20/Threads",
+    icon: "threads",
     art: "linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #0f172a 100%)",
   },
   {
@@ -161,6 +171,7 @@ export const projects: Project[] = [
     highlights: ["Frontend + REST backend split", "Search and filtering of listings"],
     stack: ["HTML", "CSS", "JavaScript", "Node.js"],
     codeUrl: "https://github.com/IITIAN-GOPU20/NaukriChowk",
+    icon: "briefcase",
     art: "linear-gradient(135deg, #facc15 0%, #f97316 100%)",
   },
 ];

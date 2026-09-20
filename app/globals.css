@@ -224,15 +224,20 @@ svg {
 }
 
 .section {
-  padding-block: clamp(72px, 10vw, 128px);
+  padding-block: clamp(56px, 7vw, 88px);
   scroll-margin-top: 90px;
+}
+
+/* adjacent sections share one gap instead of stacking two paddings */
+.section + .section {
+  padding-top: clamp(8px, 2vw, 24px);
 }
 
 .section-head {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: clamp(32px, 5vw, 56px);
+  margin-bottom: clamp(24px, 4vw, 40px);
   max-width: 720px;
 }
 
@@ -658,7 +663,7 @@ svg {
 }
 
 .hero-meta {
-  margin-top: 56px;
+  margin-top: 44px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
@@ -818,6 +823,14 @@ svg {
   text-transform: uppercase;
   color: var(--text-3);
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.b-story p b {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .b-now {
@@ -825,6 +838,10 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.b-now .timeline-mini {
+  margin-top: auto;
 }
 
 .b-now .company {
@@ -870,7 +887,7 @@ svg {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .b-edu .sub {
@@ -947,6 +964,12 @@ svg {
   color: var(--text-3);
 }
 
+.b-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 @media (max-width: 960px) {
   .b-story,
   .b-now {
@@ -969,10 +992,10 @@ svg {
 /* ─────────────────────────────────────────────
    Projects
    ───────────────────────────────────────────── */
-.projects-grid {
+.projects-featured {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 .project {
@@ -983,20 +1006,24 @@ svg {
 }
 
 .project.featured {
-  grid-column: span 2;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 }
 
 .project:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
 
+/* artwork: gradient + big icon + architecture pipeline */
 .project-art {
   position: relative;
-  min-height: 220px;
+  min-height: 240px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
 }
 
 .project-art::before {
@@ -1004,41 +1031,26 @@ svg {
   position: absolute;
   inset: 0;
   background: var(--art);
-  opacity: 0.85;
+  opacity: 0.9;
   transition: transform 0.8s var(--ease);
 }
 
 .project:hover .project-art::before {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .project-art::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
   background-size: 18px 18px;
-  mix-blend-mode: overlay;
-  opacity: 0.6;
-}
-
-.project-art .art-title {
-  position: absolute;
-  left: 24px;
-  bottom: 20px;
-  font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: #fff;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  z-index: 1;
 }
 
 .project-art .art-index {
   position: absolute;
-  top: 20px;
-  left: 24px;
+  top: 18px;
+  left: 22px;
   font-family: var(--font-mono);
   font-size: 12px;
   color: rgba(255, 255, 255, 0.85);
@@ -1046,11 +1058,60 @@ svg {
   z-index: 1;
 }
 
+.project-art .art-icon {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  width: clamp(120px, 38%, 200px);
+  height: auto;
+  transform: translateY(-58%) rotate(-8deg);
+  color: rgba(255, 255, 255, 0.28);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
+  z-index: 1;
+  transition: transform 0.8s var(--ease), color 0.4s;
+}
+
+.project:hover .project-art .art-icon {
+  transform: translateY(-58%) rotate(-2deg) scale(1.05);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.art-flow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 2px;
+}
+
+.art-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #fff;
+}
+
+.art-step > span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  white-space: nowrap;
+}
+
+.art-arrow {
+  color: rgba(255, 255, 255, 0.75);
+  flex: none;
+}
+
 .project-body {
-  padding: 26px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .project-tag {
@@ -1062,7 +1123,7 @@ svg {
 }
 
 .project-body h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -1106,7 +1167,7 @@ svg {
 
 .project-links {
   margin-top: auto;
-  padding-top: 8px;
+  padding-top: 6px;
   display: flex;
   gap: 8px;
 }
@@ -1116,19 +1177,105 @@ svg {
   font-size: 14px;
 }
 
+/* compact cards for the remaining builds */
+.projects-more-head {
+  margin: 36px 0 16px;
+}
+
+.projects-more {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project.compact .compact-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  overflow: hidden;
+}
+
+.project.compact .compact-head::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--art);
+  opacity: 0.9;
+}
+
+.project.compact .compact-head .art-index {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.2em;
+}
+
+.compact-icon {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project.compact .project-body {
+  padding: 20px;
+  gap: 10px;
+}
+
+.project.compact h3 {
+  font-size: 19px;
+}
+
+.project.compact p {
+  font-size: 14px;
+}
+
 .github-cta {
-  margin-top: 28px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
 }
 
+@media (max-width: 960px) {
+  .projects-more {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 860px) {
-  .projects-grid {
+  .project.featured {
     grid-template-columns: 1fr;
   }
-  .project.featured {
-    grid-column: span 1;
+  .project-art {
+    min-height: 190px;
+    padding: 18px;
+  }
+  .project-art .art-icon {
+    width: 110px;
+    right: 4%;
+  }
+  .art-step > span {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-more {
     grid-template-columns: 1fr;
+  }
+  .project-body {
+    padding: 20px;
   }
 }
 
@@ -1347,8 +1494,26 @@ svg {
 
 .skill-focus-top {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-focus-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.skill-focus:nth-child(2) .skill-focus-icon {
+  color: var(--accent-3);
+  background: color-mix(in srgb, var(--accent-3) 14%, transparent);
+  border-color: color-mix(in srgb, var(--accent-3) 30%, transparent);
 }
 
 .skill-focus-index {
@@ -1427,12 +1592,8 @@ svg {
   gap: 8px;
 }
 
-.skill-row h3::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 2px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+.skill-row h3 svg {
+  color: var(--accent);
   flex: none;
 }
 

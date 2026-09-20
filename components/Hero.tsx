@@ -87,10 +87,6 @@ export default function Hero() {
           </div>
         ))}
       </div>
-
-      <a className="scroll-hint" href="#about" aria-label="Scroll to about">
-        scroll
-      </a>
     </section>
   );
 }

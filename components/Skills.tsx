@@ -1,4 +1,15 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Braces, Brain, ChartCandlestick, Database, LayoutTemplate, Server, Wrench } from "lucide-react";
+import type { ComponentType } from "react";
+
+const ICONS: Record<string, ComponentType<{ size?: number; strokeWidth?: number; className?: string }>> = {
+  "AI & LLM Engineering": Brain,
+  "Quant & Trading Systems": ChartCandlestick,
+  Languages: Braces,
+  Backend: Server,
+  Frontend: LayoutTemplate,
+  "Data & Infra": Database,
+  Practices: Wrench,
+};
 import { skillGroups } from "@/data/site";
 
 export default function Skills() {
@@ -20,8 +31,13 @@ export default function Skills() {
         {focus.map((group, i) => (
           <article className="card skill-focus reveal" key={group.title}>
             <div className="skill-focus-top">
-              <span className="skill-focus-index">0{i + 1}</span>
-              <h3>{group.title}</h3>
+              <span className="skill-focus-icon">
+                {(() => { const I = ICONS[group.title]; return I ? <I size={20} strokeWidth={1.8} /> : null; })()}
+              </span>
+              <div>
+                <span className="skill-focus-index">0{i + 1}</span>
+                <h3>{group.title}</h3>
+              </div>
             </div>
             <p>{group.focus!.blurb}</p>
             <div className="chips">
@@ -41,7 +57,10 @@ export default function Skills() {
       <div className="card skill-rows reveal">
         {rest.map((group) => (
           <div className="skill-row" key={group.title}>
-            <h3>{group.title}</h3>
+            <h3>
+              {(() => { const I = ICONS[group.title]; return I ? <I size={14} strokeWidth={2} /> : null; })()}
+              {group.title}
+            </h3>
             <div className="chips">
               {group.skills.map((skill) => (
                 <span className="chip chip-sm" key={skill}>

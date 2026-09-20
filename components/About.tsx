@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, FileText, GraduationCap, Mail } from "lucide-react";
+import { ArrowUpRight, Briefcase, Clock, FileText, GraduationCap, Link2, Mail, Sparkles } from "lucide-react";
 import { Github, Linkedin } from "./Icons";
 import { education, experience, marquee, site } from "@/data/site";
 
@@ -46,23 +46,21 @@ export default function About() {
 
         <div className="bento">
           <article className="card b-story reveal">
-            <div className="label">AI systems × Quant trading × Full-stack</div>
+            <div className="label">
+              <Sparkles size={13} aria-hidden="true" /> AI systems × Quant trading × Full-stack
+            </div>
             <p>{site.intro}</p>
             <p>
-              Two threads run through my work. On the AI side, VisionAI — a LangGraph multi-agent
-              platform with RAG, web search, code and document generation and vision agents. On the
-              trading side, a Python quant platform covering market-data ingest, event-driven
-              backtesting, risk gates and live execution. At Goldman Sachs I work on global-markets
-              systems where correctness and latency actually matter.
-            </p>
-            <p>
-              I care about the whole path from idea to production: clear APIs, sensible data models,
-              code that&rsquo;s easy to change, and the tooling that lets a team move fast without breaking things.
+              Two threads run through my work: <b>VisionAI</b>, a LangGraph multi-agent platform with
+              RAG, web search, code/document generation and vision agents; and a <b>Python quant
+              platform</b> covering market-data ingest, event-driven backtesting, risk gates and live
+              execution. At Goldman Sachs I work on global-markets systems where correctness and
+              latency actually matter.
             </p>
           </article>
 
           <article className="card b-now reveal">
-            <div className="b-label">Now</div>
+            <div className="b-label"><Briefcase size={13} aria-hidden="true" /> Now</div>
             <div>
               <div className="company">{current.company}</div>
               <div className="role">
@@ -89,13 +87,13 @@ export default function About() {
           </article>
 
           <article className="card b-clock reveal">
-            <div className="b-label">Local time</div>
+            <div className="b-label"><Clock size={13} aria-hidden="true" /> Local time</div>
             <LocalClock />
             <div className="place">{site.location}</div>
           </article>
 
           <article className="card b-links reveal">
-            <div className="b-label">Find me</div>
+            <div className="b-label"><Link2 size={13} aria-hidden="true" /> Find me</div>
             <a href={site.github} target="_blank" rel="noopener noreferrer">
               <Github size={18} /> GitHub <ArrowUpRight size={16} />
             </a>

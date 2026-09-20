@@ -1,30 +1,54 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
 /**
  * Global client-side effects: background orbs, cursor spotlight,
  * scroll progress bar, reveal-on-scroll and the back-to-top button.
+ *
+ * Scroll/pointer handlers write straight to the affected elements (never to
+ * <html>) and are rAF-throttled, so scrolling doesn't trigger a full-document
+ * style recalculation on every event.
  */
 export default function Effects() {
   const [showTop, setShowTop] = useState(false);
+  const progressRef = useRef<HTMLDivElement>(null);
+  const spotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const root = document.documentElement;
+    const fine = window.matchMedia("(pointer: fine)").matches;
+    let scrollTicking = false;
+    let moveTicking = false;
+    let mx = -1000;
+    let my = -1000;
 
     const onMove = (e: PointerEvent) => {
-      root.style.setProperty("--mx", `${e.clientX}px`);
-      root.style.setProperty("--my", `${e.clientY}px`);
+      mx = e.clientX;
+      my = e.clientY;
+      if (moveTicking) return;
+      moveTicking = true;
+      requestAnimationFrame(() => {
+        moveTicking = false;
+        spotRef.current?.style.setProperty("--mx", `${mx}px`);
+        spotRef.current?.style.setProperty("--my", `${my}px`);
+      });
     };
 
     const onScroll = () => {
-      const max = root.scrollHeight - window.innerHeight;
-      root.style.setProperty("--p", String(max > 0 ? window.scrollY / max : 0));
-      setShowTop(window.scrollY > 600);
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        scrollTicking = false;
+        const max = root.scrollHeight - window.innerHeight;
+        const p = max > 0 ? window.scrollY / max : 0;
+        if (progressRef.current) progressRef.current.style.transform = `scaleX(${p})`;
+        setShowTop(window.scrollY > 600);
+      });
     };
 
-    window.addEventListener("pointermove", onMove, { passive: true });
+    if (fine) window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
@@ -37,7 +61,7 @@ export default function Effects() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.08, rootMargin: "0px 0px -24px 0px" },
     );
     document.querySelectorAll<HTMLElement>(".reveal").forEach((el) => observer.observe(el));
 
@@ -50,12 +74,12 @@ export default function Effects() {
 
   return (
     <>
-      <div className="progress" aria-hidden="true" />
+      <div className="progress" ref={progressRef} aria-hidden="true" />
       <div className="bg-canvas" aria-hidden="true">
         <div className="bg-orb one" />
         <div className="bg-orb two" />
       </div>
-      <div className="spotlight" aria-hidden="true" />
+      <div className="spotlight" ref={spotRef} aria-hidden="true" />
       <button
         type="button"
         className={`to-top${showTop ? " show" : ""}`}
