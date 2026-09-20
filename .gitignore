@@ -27,3 +27,7 @@ Thumbs.db
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Agent tooling notes (local only)
+AGENTS.md
+CLAUDE.md
