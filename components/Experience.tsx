@@ -7,7 +7,7 @@ export default function Experience() {
       <div className="section-head reveal">
         <span className="eyebrow">Experience</span>
         <h2>Where I&rsquo;ve worked.</h2>
-        <p>From an ed-tech startup to a health-tech scale-up to Goldman Sachs.</p>
+        <p>From an ed-tech startup to a health-tech scale-up to Goldman Sachs&rsquo; Global Markets — with AI and trading systems as the through-line.</p>
       </div>
 
       <div className="timeline">

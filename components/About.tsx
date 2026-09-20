@@ -46,13 +46,18 @@ export default function About() {
 
         <div className="bento">
           <article className="card b-story reveal">
-            <div className="label">Full-stack × Backend × Systems</div>
+            <div className="label">AI systems × Quant trading × Full-stack</div>
             <p>{site.intro}</p>
+            <p>
+              Two threads run through my work. On the AI side, VisionAI — a LangGraph multi-agent
+              platform with RAG, web search, code and document generation and vision agents. On the
+              trading side, a Python quant platform covering market-data ingest, event-driven
+              backtesting, risk gates and live execution. At Goldman Sachs I work on global-markets
+              systems where correctness and latency actually matter.
+            </p>
             <p>
               I care about the whole path from idea to production: clear APIs, sensible data models,
               code that&rsquo;s easy to change, and the tooling that lets a team move fast without breaking things.
-              Outside work I rebuild products I admire — a Figma clone, a Vercel clone, a Twitter clone —
-              to learn how they really work under the hood.
             </p>
           </article>
 

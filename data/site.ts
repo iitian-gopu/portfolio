@@ -15,7 +15,7 @@ export const site = {
   roles: ["Full-Stack Engineer", "AI Engineer", "Quant Systems Builder", "Backend Engineer"],
   tagline: "I build fast, reliable software — from real-time UIs and distributed backends to LLM agents and algorithmic trading systems.",
   intro:
-    "Software Engineer at Goldman Sachs and a 2023 graduate of IIT (BHU) Varanasi. I like turning ambiguous problems into clean, scalable systems — and shipping them.",
+    "Software Engineer at Goldman Sachs and a 2023 graduate of IIT (BHU) Varanasi. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and I like taking ambiguous problems all the way to something that runs reliably in production.",
   location: "Bengaluru, India", // TODO: confirm
   timezone: "Asia/Kolkata",
   availability: "Open to interesting conversations",
@@ -34,8 +34,8 @@ export const site = {
 
 export const stats = [
   { value: "3+", label: "Years building software" },
-  { value: "3", label: "Companies, startup → Wall St." },
-  { value: "10+", label: "Production systems shipped" },
+  { value: "8", label: "LLM agents orchestrated in VisionAI" },
+  { value: "11", label: "Packages in my quant trading platform" },
   { value: "IIT", label: "(BHU) Varanasi, Class of 2023" },
 ];
 
@@ -185,13 +185,27 @@ export const experience: Experience[] = [
     location: "Bengaluru",
     url: "https://www.goldmansachs.com",
     summary:
-      "Engineering in Global Markets — building low-latency, high-reliability systems that the trading floor depends on.",
+      "Engineering in Global Markets — low-latency, high-reliability trading systems where correctness and latency directly matter.",
     points: [
-      "Design and ship backend services for global markets platforms, with strong emphasis on correctness, observability and resilience.",
-      "Own features end-to-end: requirements with traders and quants, design reviews, implementation, testing and production support.",
-      "Improve performance and reliability of critical data pipelines and APIs.",
+      "Design and ship backend services for global-markets trading platforms, with a strong emphasis on correctness, observability and resilience.",
+      "Own features end-to-end with traders and quants: requirements, design reviews, implementation, testing and production support.",
+      "Improve throughput, latency and reliability of market-data and trade-lifecycle pipelines and APIs.",
     ],
-    stack: ["Java", "Python", "Distributed Systems", "SQL", "Kafka"],
+    stack: ["Java", "Python", "Low-latency systems", "Market data", "Kafka", "SQL"],
+  },
+  {
+    company: "Independent",
+    role: "AI & Quant Systems Builder",
+    period: "2025 — Present",
+    location: "Side projects",
+    summary:
+      "Two production-grade platforms built end-to-end outside work: a multi-agent GenAI workspace and a systematic trading stack.",
+    points: [
+      "VisionAI — LangGraph multi-agent platform routing requests across 8 specialized agents (chat, web search, coding, PDF RAG, document/PPT generation, image generation and vision) over a multi-provider LLM layer (Gemini, Groq, OpenRouter) with Qdrant-backed RAG; Dockerized Node microservices on AWS.",
+      "Algo Platform — 11-package Python monorepo for multi-asset systematic trading: REST/WebSocket market-data ingest, Parquet + DuckDB data layer, event-driven backtester, walk-forward research with Optuna, risk gates and kill-switch, paper and live execution, cron-driven orchestrator.",
+      "Spec-driven engineering throughout: per-package specs, 60+ ADRs, property-based tests, schema contracts at every boundary.",
+    ],
+    stack: ["LangGraph", "LangChain", "Qdrant", "Python", "pandas", "PyArrow", "DuckDB", "Pydantic", "Node.js", "AWS"],
   },
   {
     company: "PocketPills",
@@ -236,60 +250,51 @@ export const education = [
   },
 ];
 
-export const skillGroups = [
-  {
-    title: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Java", "C++", "SQL", "Go"],
-  },
+export type SkillGroup = {
+  title: string;
+  skills: string[];
+  /** Spotlight card with a blurb and a link to the related project */
+  focus?: { blurb: string; href: string; cta: string };
+};
+
+export const skillGroups: SkillGroup[] = [
   {
     title: "AI & LLM Engineering",
-    skills: [
-      "LangGraph",
-      "LangChain",
-      "Multi-agent systems",
-      "RAG",
-      "Vector search (Qdrant)",
-      "Embeddings",
-      "Gemini",
-      "Groq",
-      "OpenRouter",
-      "Prompt engineering",
-      "Tool calling",
-      "Multimodal LLMs",
-    ],
+    focus: {
+      blurb: "Multi-agent systems with LangGraph, RAG over vector stores, multi-provider LLM routing and multimodal agents — shipped to production in VisionAI.",
+      href: "#work",
+      cta: "See VisionAI",
+    },
+    skills: ["LangGraph", "LangChain", "Multi-agent systems", "RAG", "Qdrant", "Gemini", "Groq", "OpenRouter", "Multimodal LLMs"],
   },
   {
     title: "Quant & Trading Systems",
-    skills: [
-      "Event-driven backtesting",
-      "Walk-forward validation",
-      "Feature engineering",
-      "Risk management & kill-switch",
-      "Market-data pipelines",
-      "Broker APIs & WebSockets",
-      "pandas",
-      "NumPy",
-      "SciPy",
-      "scikit-learn",
-      "Optuna",
-      "Pydantic",
-    ],
+    focus: {
+      blurb: "Market-data pipelines, event-driven backtesting, walk-forward research, risk gates and live execution — an 11-package Python platform for systematic trading.",
+      href: "#work",
+      cta: "See Algo Platform",
+    },
+    skills: ["Backtesting", "Walk-forward validation", "Risk & kill-switch", "Market-data feeds", "pandas", "NumPy", "PyArrow / Parquet", "DuckDB", "Optuna"],
   },
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS", "Redux", "React Query", "Chakra UI", "shadcn/ui"],
+    title: "Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "Java", "C++", "SQL", "Go"],
   },
   {
     title: "Backend",
     skills: ["Node.js", "Express", "GraphQL", "Spring Boot", "Prisma", "REST APIs", "WebSockets"],
   },
   {
+    title: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS", "Redux", "React Query", "shadcn/ui"],
+  },
+  {
     title: "Data & Infra",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "DuckDB", "Parquet / Arrow", "Docker", "AWS (ECS, S3, EC2)", "CI/CD"],
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "Docker", "AWS (ECS, S3, EC2)", "CI/CD"],
   },
   {
     title: "Practices",
-    skills: ["System Design", "Low-Level Design", "DSA", "Microservices", "Property-based testing", "Observability", "Spec-driven development"],
+    skills: ["System Design", "Low-Level Design", "Microservices", "Property-based testing", "Observability", "Spec-driven development"],
   },
 ];
 
@@ -309,6 +314,11 @@ export const marquee = [
   "Spring Boot",
   "Python",
   "System Design",
+  "LangGraph",
+  "RAG",
+  "Qdrant",
+  "Backtesting",
+  "pandas",
 ];
 
 export const navItems = [
