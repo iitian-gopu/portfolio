@@ -12,8 +12,8 @@ export const site = {
   initials: "GJ",
   role: "Software Engineer",
   // Words that rotate in the hero headline
-  roles: ["Full-Stack Engineer", "Backend Engineer", "Systems Builder", "Problem Solver"],
-  tagline: "I build fast, reliable software for the web — from real-time UIs to distributed backends.",
+  roles: ["Full-Stack Engineer", "AI Engineer", "Quant Systems Builder", "Backend Engineer"],
+  tagline: "I build fast, reliable software — from real-time UIs and distributed backends to LLM agents and algorithmic trading systems.",
   intro:
     "Software Engineer at Goldman Sachs and a 2023 graduate of IIT (BHU) Varanasi. I like turning ambiguous problems into clean, scalable systems — and shipping them.",
   location: "Bengaluru, India", // TODO: confirm
@@ -59,16 +59,18 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "VisionAI",
-    tag: "Multi-agent GenAI platform",
+    tag: "Multi-agent GenAI platform · LangGraph",
     description:
       "A production-style AI workspace that routes each request to a specialized agent — chat, web search, coding, PDF RAG, PDF/PPT generation, image generation and image analysis — orchestrated with LangGraph.",
     highlights: [
-      "LLM-classified routing across 8 agents; Qdrant-backed RAG over uploaded PDFs",
+      "LangGraph state machine with an LLM classifier routing across 8 specialized agents",
+      "RAG pipeline: PDF parsing → text splitting → Gemini embeddings → Qdrant vector search",
+      "Multi-provider LLM layer (Gemini 2.5, Groq, OpenRouter) with Tavily web search and multimodal image understanding",
       "Monaco code artifacts with a sandboxed live HTML/CSS/JS preview",
       "Firebase auth, Redis sessions & memory, Razorpay credits, per-agent rate limiting",
       "Dockerized Node microservices on AWS ECS/ECR, React on S3 + CloudFront via GitHub Actions",
     ],
-    stack: ["React", "Node.js", "Express", "LangGraph", "LangChain", "Qdrant", "Redis", "MongoDB", "Docker", "AWS"],
+    stack: ["LangGraph", "LangChain", "Gemini", "Groq", "OpenRouter", "Qdrant", "Tavily", "React", "Node.js", "Express", "Redis", "MongoDB", "Docker", "AWS"],
     liveUrl: "https://visionai-frontend-hvi0.onrender.com",
     codeUrl: "https://github.com/iitian-gopu/visionai",
     art: "linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #0ea5e9 100%)",
@@ -76,16 +78,18 @@ export const projects: Project[] = [
   },
   {
     title: "Algo Platform",
-    tag: "Algorithmic trading stack",
+    tag: "Quant platform · Python monorepo",
     description:
       "A multi-asset, India-first algorithmic trading platform for mid-frequency strategies (1-minute to daily) — one monorepo covering the full path from raw market data to live orders, with backtest and live guaranteed to see identical data.",
     highlights: [
-      "11 Python packages: data ingest, feature engineering, event-driven backtest, research & walk-forward, risk, paper/live trading",
+      "11 Python packages: market-data ingest (REST + WebSocket broker feeds), feature engineering, event-driven backtest, research, risk, paper/live trading",
+      "Columnar data layer on Parquet / PyArrow with DuckDB queries; Pydantic + pandera schema contracts at every boundary",
+      "Research loop: strategy library, walk-forward validation and Optuna hyperparameter sweeps with scikit-learn models",
       "Risk layer with refusal gates, position/exposure limits, VaR and a kill-switch wired to operator alerts",
       "Cron-dispatched orchestrator with run journal, run locks, retry ladders and evidence gates — no external scheduler",
-      "Spec-driven engineering: per-package SPEC.md, ADRs, pre-commit + duplication checks, generated status board",
+      "Spec-driven engineering: per-package SPEC.md, 60+ ADRs, Hypothesis property tests, mypy/ruff, pre-commit and duplication gates",
     ],
-    stack: ["Python", "pandas", "Parquet", "Streamlit", "uv", "pytest", "Docker"],
+    stack: ["Python", "pandas", "NumPy", "SciPy", "PyArrow / Parquet", "DuckDB", "Pydantic", "scikit-learn", "Optuna", "websockets", "Streamlit", "pytest + Hypothesis", "uv"],
     codeUrl: "https://github.com/iitian-gopu/algo-platform",
     art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
     featured: true,
@@ -235,7 +239,41 @@ export const education = [
 export const skillGroups = [
   {
     title: "Languages",
-    skills: ["TypeScript", "JavaScript", "Java", "Python", "C++", "SQL", "Go"],
+    skills: ["Python", "TypeScript", "JavaScript", "Java", "C++", "SQL", "Go"],
+  },
+  {
+    title: "AI & LLM Engineering",
+    skills: [
+      "LangGraph",
+      "LangChain",
+      "Multi-agent systems",
+      "RAG",
+      "Vector search (Qdrant)",
+      "Embeddings",
+      "Gemini",
+      "Groq",
+      "OpenRouter",
+      "Prompt engineering",
+      "Tool calling",
+      "Multimodal LLMs",
+    ],
+  },
+  {
+    title: "Quant & Trading Systems",
+    skills: [
+      "Event-driven backtesting",
+      "Walk-forward validation",
+      "Feature engineering",
+      "Risk management & kill-switch",
+      "Market-data pipelines",
+      "Broker APIs & WebSockets",
+      "pandas",
+      "NumPy",
+      "SciPy",
+      "scikit-learn",
+      "Optuna",
+      "Pydantic",
+    ],
   },
   {
     title: "Frontend",
@@ -247,11 +285,11 @@ export const skillGroups = [
   },
   {
     title: "Data & Infra",
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "Docker", "AWS (ECS, S3, EC2)", "CI/CD"],
+    skills: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "DuckDB", "Parquet / Arrow", "Docker", "AWS (ECS, S3, EC2)", "CI/CD"],
   },
   {
     title: "Practices",
-    skills: ["System Design", "Low-Level Design", "DSA", "Microservices", "Testing", "Observability"],
+    skills: ["System Design", "Low-Level Design", "DSA", "Microservices", "Property-based testing", "Observability", "Spec-driven development"],
   },
 ];
 
