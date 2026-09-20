@@ -1699,3 +1699,16 @@ svg {
 .hero-badge-a {
   top: 26px;
   left: 6px;
+}
+
+.hero-badge-b {
+  bottom: 34px;
+  right: 6px;
+  animation-delay: -3s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
