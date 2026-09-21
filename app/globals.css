@@ -1712,3 +1712,15 @@ svg {
   100% {
     transform: translateY(0);
   }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-img,
+  .hero-photo-sweep,
+  .hero-badge {
+    animation: none;
+  }
+}
