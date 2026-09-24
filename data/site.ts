@@ -11,11 +11,13 @@ export const site = {
   firstName: "Gopal",
   initials: "GJ",
   role: "Software Engineer",
+  /** Shown in the hero status pill */
+  currentRole: "Analyst @ Goldman Sachs",
   // Words that rotate in the hero headline
   roles: ["Full-Stack Engineer", "AI Engineer", "Quant Systems Builder", "Backend Engineer"],
   tagline: "I build fast, reliable software — from real-time UIs and distributed backends to LLM agents and algorithmic trading systems.",
   intro:
-    "Software Engineer at Goldman Sachs, IIT (BHU) Varanasi ’23. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and take ambiguous problems all the way to something that runs reliably.",
+    "Analyst at Goldman Sachs, IIT (BHU) Varanasi ’23. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and take ambiguous problems all the way to something that runs reliably.",
   location: "Bengaluru, India", // TODO: confirm
   timezone: "Asia/Kolkata",
   availability: "Open to interesting conversations",
@@ -189,65 +191,48 @@ export type Experience = {
   stack: string[];
 };
 
-// TODO: replace the bullet points with your real impact numbers.
 export const experience: Experience[] = [
   {
     company: "Goldman Sachs",
-    role: "Software Engineer",
-    period: "2024 — Present",
+    role: "Analyst",
+    period: "Jun 2025 — Present",
     location: "Bengaluru",
     url: "https://www.goldmansachs.com",
     summary:
-      "Engineering in Global Markets — low-latency, high-reliability trading systems where correctness and latency directly matter.",
+      "Engineering across Investment Banking and Equity Derivatives — agentic AI research tooling and ML-driven options analytics.",
     points: [
-      "Design and ship backend services for global-markets trading platforms, with a strong emphasis on correctness, observability and resilience.",
-      "Own features end-to-end with traders and quants: requirements, design reviews, implementation, testing and production support.",
-      "Improve throughput, latency and reliability of market-data and trade-lifecycle pipelines and APIs.",
+      "Banker Copilot: built a full-stack agentic AI platform (React, TypeScript, FastAPI, LangGraph, LangChain, AWS Bedrock) for multi-agent financial research, secure semantic retrieval over PostgreSQL/pgvector, peer analysis and cited report generation.",
+      "Moved document ingestion and long-running research execution onto Celery + Redis, so agent runs never block the request path.",
+      "Equity Derivatives: built ML-driven options trading analytics in C++, Golang and Python — real-time market data over Kafka, volatility forecasting with XGBoost, Greeks-based risk calculations and historical strategy simulation.",
+      "Shipped the analytics services as containers on Docker and Kubernetes.",
     ],
-    stack: ["Java", "Python", "Low-latency systems", "Market data", "Kafka", "SQL"],
+    stack: ["Python", "TypeScript", "C++", "Golang", "FastAPI", "LangGraph", "AWS Bedrock", "pgvector", "Kafka", "XGBoost", "Kubernetes"],
   },
   {
-    company: "Independent",
-    role: "AI & Quant Systems Builder",
-    period: "2025 — Present",
-    location: "Side projects",
+    company: "Casahealth Tech",
+    role: "Software Engineer II",
+    period: "Feb 2025 — Jun 2025",
     summary:
-      "Two production-grade platforms built end-to-end outside work: a multi-agent GenAI workspace and a systematic trading stack.",
+      "Healthcare workflow engine — a multi-tenant EMR platform for clinical operations.",
     points: [
-      "VisionAI — LangGraph multi-agent platform routing requests across 8 specialized agents (chat, web search, coding, PDF RAG, document/PPT generation, image generation and vision) over a multi-provider LLM layer (Gemini, Groq, OpenRouter) with Qdrant-backed RAG; Dockerized Node microservices on AWS.",
-      "Algo Platform — 11-package Python monorepo for multi-asset systematic trading: REST/WebSocket market-data ingest, Parquet + DuckDB data layer, event-driven backtester, walk-forward research with Optuna, risk gates and kill-switch, paper and live execution, cron-driven orchestrator.",
-      "Spec-driven engineering throughout: per-package specs, 60+ ADRs, property-based tests, schema contracts at every boundary.",
+      "Built a multi-tenant EMR platform (Java, Spring Boot, PostgreSQL) automating appointment scheduling, clinical workflows and patient record management.",
+      "Event-driven processing over RabbitMQ with configurable state transitions, idempotent execution and retry ladders.",
+      "Audit logging across clinical actions, Redis caching and Dockerised deployment.",
     ],
-    stack: ["LangGraph", "LangChain", "Qdrant", "Python", "pandas", "PyArrow", "DuckDB", "Pydantic", "Node.js", "AWS"],
+    stack: ["Java", "Spring Boot", "RabbitMQ", "Redis", "PostgreSQL", "Docker"],
   },
   {
-    company: "PocketPills",
-    role: "SDE-2",
-    period: "2023 — 2024",
-    location: "Remote",
-    url: "https://www.pocketpills.com",
+    company: "Edfora Infotech",
+    role: "Software Engineer",
+    period: "Jun 2023 — Feb 2025",
     summary:
-      "Full-stack engineer at a fast-growing digital pharmacy, owning customer-facing features across web and backend.",
+      "Assessment, semantic search and recommendation systems for a high-scale ed-tech platform.",
     points: [
-      "Built and scaled customer-facing features across the web app and backend services.",
-      "Led modules end-to-end — API design, database schema, front-end and rollout.",
-      "Improved reliability and performance of order and prescription flows.",
+      "Assessment Engine: scalable online/offline platform in C++, Rust and Node.js with Kafka, Redis, MongoDB and AWS SQS — 100K+ concurrent users and 80K+ exam responses; cut latency 40% and raised throughput 35%.",
+      "AI Knowledge Engine: semantic question-processing across 2M+ questions (Python, FastAPI, LangChain, Sentence Transformers, FAISS/Pinecone) with OCR/LaTeX extraction and NLP classification — reduced duplicates by 95%.",
+      "Personalized Learning Engine: ML recommendation system (XGBoost, scikit-learn, spaCy) combining performance analytics with semantic question metadata to surface learning gaps — improved engagement by 20%.",
     ],
-    stack: ["Node.js", "React", "TypeScript", "PostgreSQL", "AWS"],
-  },
-  {
-    company: "Edfora",
-    role: "SDE-1",
-    period: "2022 — 2023",
-    location: "Delhi NCR",
-    url: "https://www.edfora.com",
-    summary: "Ed-tech engineering — services and dashboards used by thousands of students every day.",
-    points: [
-      "Developed backend microservices and React dashboards for the learning platform.",
-      "Worked on data-heavy analytics features and CI/CD pipelines.",
-      "Collaborated with product and design to ship weekly.",
-    ],
-    stack: ["Java", "Spring Boot", "React", "MongoDB", "Docker"],
+    stack: ["C++", "Rust", "Node.js", "Python", "FastAPI", "Kafka", "MongoDB", "FAISS / Pinecone", "XGBoost", "AWS SQS"],
   },
 ];
 

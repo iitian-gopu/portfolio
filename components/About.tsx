@@ -54,8 +54,8 @@ export default function About() {
               Two threads run through my work: <b>VisionAI</b>, a LangGraph multi-agent platform with
               RAG, web search, code/document generation and vision agents; and a <b>Python quant
               platform</b> covering market-data ingest, event-driven backtesting, risk gates and live
-              execution. At Goldman Sachs I work on global-markets systems where correctness and
-              latency actually matter.
+              execution. At Goldman Sachs I work on Banker Copilot — an agentic AI
+              platform for financial research — and on equity derivatives analytics.
             </p>
           </article>
 

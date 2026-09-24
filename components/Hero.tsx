@@ -35,7 +35,7 @@ export default function Hero() {
           <div className="hero-pill reveal is-visible">
             <span className="dot" />
             <span>
-              Currently <strong>Software Engineer @ Goldman Sachs</strong> &middot; IIT (BHU) &rsquo;23
+              Currently <strong>{site.currentRole}</strong> &middot; IIT (BHU) &rsquo;23
             </span>
           </div>
 
