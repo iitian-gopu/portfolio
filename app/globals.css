@@ -1061,10 +1061,10 @@ svg {
 .project-art .art-icon {
   position: absolute;
   top: 50%;
-  right: 6%;
-  width: clamp(120px, 38%, 200px);
+  left: 50%;
+  width: clamp(110px, 34%, 180px);
   height: auto;
-  transform: translateY(-58%) rotate(-8deg);
+  transform: translate(-50%, -50%) rotate(-8deg);
   color: rgba(255, 255, 255, 0.28);
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
   z-index: 1;
@@ -1072,39 +1072,8 @@ svg {
 }
 
 .project:hover .project-art .art-icon {
-  transform: translateY(-58%) rotate(-2deg) scale(1.05);
+  transform: translate(-50%, -50%) rotate(-2deg) scale(1.06);
   color: rgba(255, 255, 255, 0.4);
-}
-
-.art-flow {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 2px;
-}
-
-.art-step {
-  display: inline-flex;
-  align-items: center;
-  gap: 1px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: #fff;
-}
-
-.art-step > span {
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  white-space: nowrap;
-}
-
-.art-arrow {
-  color: rgba(255, 255, 255, 0.75);
-  flex: none;
 }
 
 .project-body {
@@ -1299,12 +1268,7 @@ svg {
     padding: 18px;
   }
   .project-art .art-icon {
-    width: 110px;
-    right: 4%;
-  }
-  .art-step > span {
-    padding: 5px 8px;
-    font-size: 11px;
+    width: 96px;
   }
 }
 

@@ -7,7 +7,6 @@ import {
   Briefcase,
   ChartCandlestick,
   ChevronDown,
-  ChevronRight,
   MessageCircle,
   MessagesSquare,
   PenTool,
@@ -39,16 +38,6 @@ function ProjectArt({ project, index, onPlay }: { project: Project; index: numbe
       )}
       <span className="art-index">{String(index + 1).padStart(2, "0")}</span>
       {Icon && <Icon className="art-icon" strokeWidth={1.4} aria-hidden="true" />}
-      {project.flow && (
-        <div className="art-flow" aria-label={`${project.title} architecture`}>
-          {project.flow.map((step, i) => (
-            <span key={step} className="art-step">
-              {i > 0 && <ChevronRight size={12} className="art-arrow" aria-hidden="true" />}
-              <span>{step}</span>
-            </span>
-          ))}
-        </div>
-      )}
       {project.demoVideo && (
         <button type="button" className="art-play" onClick={onPlay} aria-label={`Watch ${project.title} demo`}>
           <Play size={22} fill="currentColor" />

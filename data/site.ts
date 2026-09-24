@@ -58,8 +58,6 @@ export type Project = {
   featured?: boolean;
   /** Icon key rendered on the card artwork (see components/Projects.tsx) */
   icon?: "bot" | "chart" | "pen" | "rocket" | "message" | "threads" | "briefcase";
-  /** Mini architecture pipeline drawn on the card artwork */
-  flow?: string[];
 };
 
 export const projects: Project[] = [
@@ -76,7 +74,6 @@ export const projects: Project[] = [
     ],
     stack: ["LangGraph", "LangChain", "Gemini", "Groq", "Qdrant", "React", "Node.js", "Redis", "AWS"],
     icon: "bot",
-    flow: ["Request", "LLM router", "8 agents", "RAG · Qdrant", "Response"],
     liveUrl: "https://visionai-frontend-hvi0.onrender.com",
     codeUrl: "https://github.com/iitian-gopu/visionai",
     image: "/projects/visionai.jpg",
@@ -97,7 +94,6 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "pandas", "NumPy", "PyArrow", "DuckDB", "Pydantic", "scikit-learn", "Optuna", "Streamlit"],
     icon: "chart",
-    flow: ["Market data", "Features", "Backtest", "Risk gates", "Live orders"],
     codeUrl: "https://github.com/iitian-gopu/algo-platform",
     art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
     featured: true,
@@ -116,7 +112,6 @@ export const projects: Project[] = [
     liveUrl: "https://fig-forge.vercel.app",
     codeUrl: "https://github.com/iitian-gopu/FigForge",
     icon: "pen",
-    flow: ["Canvas", "Liveblocks", "Multiplayer"],
     art: "linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%)",
     featured: true,
   },
@@ -133,7 +128,6 @@ export const projects: Project[] = [
     stack: ["Node.js", "Express", "Next.js", "Docker", "AWS ECS", "S3", "Kafka", "Redis", "Socket.IO"],
     codeUrl: "https://github.com/iitian-gopu/vercel-clone",
     icon: "rocket",
-    flow: ["git push", "Build · ECS", "S3", "Proxy", "Live URL"],
     art: "linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #1e1b4b 100%)",
     featured: true,
   },
