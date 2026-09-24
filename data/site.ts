@@ -24,8 +24,8 @@ export const site = {
   email: "gopaljaiswal20192023@gmail.com",
   github: "https://github.com/iitian-gopu",
   linkedin: "https://www.linkedin.com/in/gopal-jaiswal-97775518b",
-  resumeUrl: "/resume.pdf", // TODO: drop your resume at public/resume.pdf (or set to "")
-  siteUrl: "https://gopaljaiswal.vercel.app", // TODO: update after deploy
+  resumeUrl: "/resume.pdf",
+  siteUrl: "https://portfolio-gopal-jaiswals-projects.vercel.app",
   // Hero animation (plays once, muted). Swap for your own MP4 + poster image.
   heroVideo: "/media/gopal-desk.mp4",
   heroPoster: "/media/gopal-desk.jpg",
