@@ -27,11 +27,11 @@ export const site = {
   resumeUrl: "/resume.pdf",
   siteUrl: "https://portfolio-gopal-jaiswals-projects.vercel.app",
   // Hero animation (plays once, muted). Swap for your own MP4 + poster image.
-  heroVideo: "/media/gopal-desk.mp4",
-  heroPoster: "/media/gopal-desk.jpg",
+  heroVideo: "/media/gopal-hero.mp4",
+  heroPoster: "/media/gopal-hero-poster.jpg",
   // YOUR PHOTO: drop it at public/media/gopal.jpg and set photo: "/media/gopal.jpg".
   // When set, the hero shows your photo instead of the video.
-  photo: "/media/gopal-hero.webp",
+  photo: "",
 };
 
 export const stats = [

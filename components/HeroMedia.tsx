@@ -78,19 +78,23 @@ function HeroVideo() {
   }, []);
 
   return (
-    <div className="hero-media" aria-label="Animated developer workspace">
-      <video
-        ref={videoRef}
-        className="hero-video"
-        src={site.heroVideo}
-        poster={site.heroPoster}
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        disablePictureInPicture
-      />
-      <div className="hero-media-vignette" aria-hidden="true" />
+    <div className="hero-photo-scene">
+      <div className="hero-media" aria-label="Animated developer workspace">
+        <video
+          ref={videoRef}
+          className="hero-video"
+          src={site.heroVideo}
+          poster={site.heroPoster}
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+        />
+        <div className="hero-media-vignette" aria-hidden="true" />
+      </div>
+      <span className="hero-badge hero-badge-a">IIT (BHU) &rsquo;23</span>
+      <span className="hero-badge hero-badge-b">Goldman Sachs</span>
     </div>
   );
 }
