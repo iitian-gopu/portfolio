@@ -79,7 +79,7 @@ function HeroVideo() {
 
   return (
     <div className="hero-photo-scene">
-      <div className="hero-media" aria-label="Animated developer workspace">
+      <div className="hero-media hero-video-frame" aria-label="Animated developer workspace">
         <video
           ref={videoRef}
           className="hero-video"
