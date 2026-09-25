@@ -1768,6 +1768,33 @@ svg {
 }
 
 /* matches the clip DAR (26:15) so the full scene shows, uncropped */
+.hero-sound {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(10, 10, 15, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.hero-sound:hover {
+  background: rgba(10, 10, 15, 0.75);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .hero-video-frame {
   aspect-ratio: 26 / 15;
   /* gentler fade than the portrait frame so the whole scene stays readable */

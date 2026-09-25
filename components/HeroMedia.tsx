@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import { site } from "@/data/site";
 
 export default function HeroMedia() {
@@ -9,77 +10,41 @@ export default function HeroMedia() {
 }
 
 /**
- * Video variant: a short generated clip played as a seamless ping-pong loop
- * (forward, then scrubbed backwards) so a 2–4 s clip never visibly jumps.
+ * Video variant: the intro clip. It autoplays muted (browsers block autoplay
+ * with sound), loops, pauses when scrolled off-screen, and exposes a sound
+ * toggle so a visitor can choose to hear it.
  */
 function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    let raf = 0;
-    let last = 0;
-    let reversing = false;
-    let visible = true;
-
-    const stopReverse = () => {
-      cancelAnimationFrame(raf);
-      raf = 0;
-      reversing = false;
-    };
-
-    // Reverse by seeking backwards ~24 times a second. Seeking is the expensive
-    // part, so it only runs while the hero is actually on screen.
-    const step = (now: number) => {
-      if (!reversing) return;
-      const dt = (now - last) / 1000;
-      if (dt >= 1 / 24) {
-        last = now;
-        if (video.currentTime <= 0.06) {
-          stopReverse();
-          video.addEventListener("seeked", () => void video.play().catch(() => {}), { once: true });
-          video.currentTime = 0;
-          return;
-        }
-        video.currentTime = Math.max(0, video.currentTime - dt);
-      }
-      raf = requestAnimationFrame(step);
-    };
-
-    const onEnded = () => {
-      if (!visible) return;
-      stopReverse();
-      reversing = true;
-      last = performance.now();
-      raf = requestAnimationFrame(step);
-    };
 
     const io = new IntersectionObserver(
       ([entry]) => {
-        visible = entry.isIntersecting;
-        if (!visible) {
-          stopReverse();
-          video.pause();
-        } else if (video.paused) {
-          void video.play().catch(() => {});
-        }
+        if (!entry.isIntersecting) video.pause();
+        else void video.play().catch(() => {});
       },
       { threshold: 0.1 },
     );
     io.observe(video);
-
-    video.addEventListener("ended", onEnded);
-    return () => {
-      video.removeEventListener("ended", onEnded);
-      io.disconnect();
-      stopReverse();
-    };
+    return () => io.disconnect();
   }, []);
+
+  function toggleSound() {
+    const video = videoRef.current;
+    if (!video) return;
+    const next = !muted;
+    video.muted = next;
+    setMuted(next);
+    if (!next) void video.play().catch(() => {});
+  }
 
   return (
     <div className="hero-photo-scene">
-      <div className="hero-media hero-video-frame" aria-label="Animated developer workspace">
+      <div className="hero-media hero-video-frame" aria-label="Video introduction">
         <video
           ref={videoRef}
           className="hero-video"
@@ -87,12 +52,22 @@ function HeroVideo() {
           poster={site.heroPoster}
           autoPlay
           muted
+          loop
           playsInline
           preload="auto"
           disablePictureInPicture
         />
         <div className="hero-media-vignette" aria-hidden="true" />
       </div>
+      <button
+        type="button"
+        className="hero-sound"
+        onClick={toggleSound}
+        aria-label={muted ? "Unmute the intro" : "Mute the intro"}
+      >
+        {muted ? <VolumeX size={15} /> : <Volume2 size={15} />}
+        <span>{muted ? "Sound on" : "Mute"}</span>
+      </button>
       <span className="hero-badge hero-badge-a">IIT (BHU) &rsquo;23</span>
       <span className="hero-badge hero-badge-b">Goldman Sachs</span>
     </div>
