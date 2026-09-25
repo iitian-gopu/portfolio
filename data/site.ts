@@ -57,7 +57,7 @@ export type Project = {
   art: string;
   featured?: boolean;
   /** Icon key rendered on the card artwork (see components/Projects.tsx) */
-  icon?: "bot" | "chart" | "pen" | "rocket" | "message" | "threads" | "briefcase";
+  icon?: "bot" | "chart" | "pen" | "rocket" | "message" | "threads" | "briefcase" | "mic" | "plug" | "play";
 };
 
 export const projects: Project[] = [
@@ -99,6 +99,24 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "AI HireBooster",
+    tag: "GenAI mock-interview platform",
+    description:
+      "A full-stack AI interview coach: upload a resume, get a role-specific technical or HR interview with voice answering, per-answer evaluation and a downloadable performance report.",
+    highlights: [
+      "PDF resume parsing feeds role, skills and project-aware question generation via OpenRouter",
+      "Voice-enabled timed interview with per-answer scoring across multiple dimensions",
+      "Analytics dashboard with history, downloadable PDF reports and a credit system",
+      "Firebase Google auth, MongoDB persistence and Razorpay payments",
+    ],
+    stack: ["React", "Vite", "Redux Toolkit", "Node.js", "Express", "MongoDB", "Firebase", "OpenRouter", "Razorpay"],
+    liveUrl: "https://ai-hire-booster.onrender.com",
+    codeUrl: "https://github.com/iitian-gopu/ai-hire-booster",
+    icon: "mic",
+    art: "linear-gradient(135deg, #f43f5e 0%, #f97316 55%, #facc15 100%)",
+    featured: true,
+  },
+  {
     title: "FigForge",
     tag: "Real-time collaboration",
     description:
@@ -130,6 +148,36 @@ export const projects: Project[] = [
     icon: "rocket",
     art: "linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #1e1b4b 100%)",
     featured: true,
+  },
+  {
+    title: "PageChat",
+    tag: "Chrome extension · RAG",
+    description:
+      "A Chrome extension and FastAPI backend that answers questions about the page you are on — retrieval over the page content, with a live web-search fallback when the answer is not there.",
+    highlights: [
+      "Per-tab retrieval pipeline over extracted page content",
+      "Automatic web-search fallback when the page lacks the answer",
+      "Rate limiting and a lightweight index tuned for free-tier hosting",
+    ],
+    stack: ["Python", "FastAPI", "Chrome Extension", "RAG", "Render"],
+    codeUrl: "https://github.com/iitian-gopu/pagechat",
+    icon: "plug",
+    art: "linear-gradient(135deg, #14b8a6 0%, #0ea5e9 55%, #1e1b4b 100%)",
+  },
+  {
+    title: "MagicStream",
+    tag: "Streaming platform · Go",
+    description:
+      "A movie streaming platform with a React client and a Go/Gin API — catalog browsing, JWT refresh-token auth in HttpOnly cookies, and an LLM that classifies admin reviews into ranking categories.",
+    highlights: [
+      "Go + Gin REST API over MongoDB with protected and unprotected route groups",
+      "Access/refresh JWT flow with HttpOnly cookies and guarded frontend routes",
+      "LangChainGo + OpenAI classify reviews into ranking buckets for recommendations",
+    ],
+    stack: ["Go", "Gin", "React", "MongoDB", "JWT", "LangChainGo", "OpenAI"],
+    codeUrl: "https://github.com/iitian-gopu/magic-stream",
+    icon: "play",
+    art: "linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #0f172a 100%)",
   },
   {
     title: "Twitter Clone",

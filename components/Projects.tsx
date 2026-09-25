@@ -9,8 +9,10 @@ import {
   ChevronDown,
   MessageCircle,
   MessagesSquare,
+  Mic,
   PenTool,
   Play,
+  Plug,
   Rocket,
 } from "lucide-react";
 import { Github } from "./Icons";
@@ -25,6 +27,9 @@ const ICONS = {
   message: MessageCircle,
   threads: MessagesSquare,
   briefcase: Briefcase,
+  mic: Mic,
+  plug: Plug,
+  play: Play,
 } as const;
 
 /** Card artwork: gradient + large icon + a mini architecture pipeline. */
