@@ -31,7 +31,7 @@ export const site = {
   heroPoster: "/media/gopal-desk.jpg",
   // YOUR PHOTO: drop it at public/media/gopal.jpg and set photo: "/media/gopal.jpg".
   // When set, the hero shows your photo instead of the video.
-  photo: "",
+  photo: "/media/gopal-hero.webp",
 };
 
 export const stats = [
