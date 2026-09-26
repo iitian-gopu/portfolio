@@ -56,6 +56,10 @@ export type Project = {
   /** CSS gradient used as the card artwork when there is no image */
   art: string;
   featured?: boolean;
+  /** Shown instead of a Source button when the repo is not public */
+  note?: string;
+  /** Small pill on the card artwork, e.g. "Proprietary" */
+  badge?: string;
   /** Icon key rendered on the card artwork (see components/Projects.tsx) */
   icon?: "bot" | "chart" | "pen" | "rocket" | "message" | "threads" | "briefcase" | "mic" | "plug" | "play";
 };
@@ -94,7 +98,9 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "pandas", "NumPy", "PyArrow", "DuckDB", "Pydantic", "scikit-learn", "Optuna", "Streamlit"],
     icon: "chart",
-    codeUrl: "https://github.com/iitian-gopu/algo-platform",
+    image: "/projects/algo-platform.jpg",
+    badge: "Proprietary",
+    note: "Private repository — happy to walk through the design.",
     art: "linear-gradient(135deg, #16a34a 0%, #0d9488 50%, #0f172a 100%)",
     featured: true,
   },
@@ -183,36 +189,6 @@ export const projects: Project[] = [
     image: "/projects/magic-stream.jpg",
     icon: "play",
     art: "linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #0f172a 100%)",
-  },
-  {
-    title: "Twitter Clone",
-    tag: "Full-stack · GraphQL",
-    description:
-      "Type-safe Twitter clone with Google OAuth, tweets with images, likes and follows — GraphQL API on Node with Prisma + Postgres and a Next.js client.",
-    highlights: [
-      "GraphQL API with Prisma ORM on Supabase Postgres",
-      "Redis query caching, JWT auth, Google Sign-In",
-      "Codegen for typed queries, React Query on the client",
-    ],
-    stack: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "Redis", "AWS S3", "Fly.io"],
-    codeUrl: "https://github.com/IITIAN-GOPU20/Twitter-Client",
-    icon: "message",
-    art: "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
-  },
-  {
-    title: "Threads Clone",
-    tag: "MERN · Real-time chat",
-    description:
-      "Threads-style social app with posts, likes, comments, follows, dark mode and a real-time chat with image support and seen/unseen status.",
-    highlights: [
-      "JWT auth, Cloudinary image uploads",
-      "Socket.io chat with message status & notification sounds",
-      "Fully responsive Chakra UI",
-    ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Chakra UI"],
-    codeUrl: "https://github.com/IITIAN-GOPU20/Threads",
-    icon: "threads",
-    art: "linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #0f172a 100%)",
   },
   {
     title: "NaukriChowk",

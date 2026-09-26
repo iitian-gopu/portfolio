@@ -1058,6 +1058,34 @@ svg {
   z-index: 1;
 }
 
+.art-badge {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.art-badge.compact {
+  position: static;
+  font-size: 10px;
+  padding: 4px 9px;
+}
+
+.project-note {
+  align-self: center;
+  font-size: 13px;
+  color: var(--text-3);
+}
+
 .project-art .art-icon {
   position: absolute;
   top: 50%;

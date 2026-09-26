@@ -42,6 +42,7 @@ function ProjectArt({ project, index, onPlay }: { project: Project; index: numbe
         <img className="project-image" src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
       )}
       <span className="art-index">{String(index + 1).padStart(2, "0")}</span>
+      {project.badge && <span className="art-badge">{project.badge}</span>}
       {Icon && <Icon className="art-icon" strokeWidth={1.4} aria-hidden="true" />}
       {project.demoVideo && (
         <button type="button" className="art-play" onClick={onPlay} aria-label={`Watch ${project.title} demo`}>
@@ -70,6 +71,7 @@ function ProjectLinks({ project, onPlay }: { project: Project; onPlay: () => voi
           <Github size={15} /> Source
         </a>
       )}
+      {!project.codeUrl && project.note && <span className="project-note">{project.note}</span>}
     </div>
   );
 }
@@ -168,6 +170,7 @@ export default function Projects() {
                   <div className="compact-head">
                     <span className="compact-icon">{Icon && <Icon size={20} strokeWidth={1.8} aria-hidden="true" />}</span>
                     <span className="art-index">{String(featured.length + i + 1).padStart(2, "0")}</span>
+                    {project.badge && <span className="art-badge compact">{project.badge}</span>}
                   </div>
                   <div className="project-body">
                     <span className="project-tag">{project.tag}</span>
