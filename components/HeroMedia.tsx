@@ -69,7 +69,6 @@ function HeroVideo() {
         <span>{muted ? "Sound on" : "Mute"}</span>
       </button>
       <span className="hero-badge hero-badge-a">IIT (BHU) &rsquo;23</span>
-      <span className="hero-badge hero-badge-b">Goldman Sachs</span>
     </div>
   );
 }
@@ -109,7 +108,6 @@ function HeroPhoto() {
         <div className="hero-media-vignette" aria-hidden="true" />
       </div>
       <span className="hero-badge hero-badge-a">IIT (BHU) &rsquo;23</span>
-      <span className="hero-badge hero-badge-b">Goldman Sachs</span>
     </div>
   );
 }

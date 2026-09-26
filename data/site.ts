@@ -12,12 +12,12 @@ export const site = {
   initials: "GJ",
   role: "Software Engineer",
   /** Shown in the hero status pill */
-  currentRole: "Analyst @ Goldman Sachs",
+  currentRole: "Software Engineering Analyst @ Goldman Sachs",
   // Words that rotate in the hero headline
   roles: ["Full-Stack Engineer", "AI Engineer", "Quant Systems Builder", "Backend Engineer"],
   tagline: "I build fast, reliable software — from real-time UIs and distributed backends to LLM agents and algorithmic trading systems.",
   intro:
-    "Analyst at Goldman Sachs, IIT (BHU) Varanasi ’23. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and take ambiguous problems all the way to something that runs reliably.",
+    "Software Engineering Analyst at Goldman Sachs, IIT (BHU) Varanasi ’23. I build production systems where AI meets finance — multi-agent LLM platforms and systematic trading infrastructure — and take ambiguous problems all the way to something that runs reliably.",
   location: "Bengaluru, India", // TODO: confirm
   timezone: "Asia/Kolkata",
   availability: "Open to interesting conversations",
@@ -112,6 +112,7 @@ export const projects: Project[] = [
     stack: ["React", "Vite", "Redux Toolkit", "Node.js", "Express", "MongoDB", "Firebase", "OpenRouter", "Razorpay"],
     liveUrl: "https://ai-hire-booster.onrender.com",
     codeUrl: "https://github.com/iitian-gopu/ai-hire-booster",
+    image: "/projects/ai-hire-booster.jpg",
     icon: "mic",
     art: "linear-gradient(135deg, #f43f5e 0%, #f97316 55%, #facc15 100%)",
     featured: true,
@@ -129,6 +130,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Liveblocks", "Fabric.js", "Tailwind", "shadcn/ui"],
     liveUrl: "https://fig-forge.vercel.app",
     codeUrl: "https://github.com/iitian-gopu/FigForge",
+    image: "/projects/figforge.jpg",
     icon: "pen",
     art: "linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%)",
     featured: true,
@@ -145,6 +147,7 @@ export const projects: Project[] = [
     ],
     stack: ["Node.js", "Express", "Next.js", "Docker", "AWS ECS", "S3", "Kafka", "Redis", "Socket.IO"],
     codeUrl: "https://github.com/iitian-gopu/vercel-clone",
+    image: "/projects/nanovercel.jpg",
     icon: "rocket",
     art: "linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #1e1b4b 100%)",
     featured: true,
@@ -161,6 +164,7 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "FastAPI", "Chrome Extension", "RAG", "Render"],
     codeUrl: "https://github.com/iitian-gopu/pagechat",
+    image: "/projects/pagechat.jpg",
     icon: "plug",
     art: "linear-gradient(135deg, #14b8a6 0%, #0ea5e9 55%, #1e1b4b 100%)",
   },
@@ -176,6 +180,7 @@ export const projects: Project[] = [
     ],
     stack: ["Go", "Gin", "React", "MongoDB", "JWT", "LangChainGo", "OpenAI"],
     codeUrl: "https://github.com/iitian-gopu/magic-stream",
+    image: "/projects/magic-stream.jpg",
     icon: "play",
     art: "linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #0f172a 100%)",
   },
@@ -236,7 +241,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Goldman Sachs",
-    role: "Analyst",
+    role: "Software Engineering Analyst",
     period: "Jun 2025 — Present",
     location: "Bengaluru",
     url: "https://www.goldmansachs.com",
