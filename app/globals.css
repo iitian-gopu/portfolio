@@ -1884,8 +1884,16 @@ svg {
   background: linear-gradient(180deg, rgba(0, 4, 21, 0) 40%, rgba(0, 4, 21, 0.85) 100%);
 }
 
+/* the art column stretches when "More details" expands the text column;
+   contain keeps the whole thumbnail visible at any card height */
 .project.has-image .project-image {
-  object-position: left top;
+  object-fit: contain;
+  object-position: center;
+  background: #05070c;
+}
+
+.project.has-image .project-art {
+  background: #05070c;
 }
 
 .project.has-image .art-icon {
