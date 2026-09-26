@@ -1884,12 +1884,12 @@ svg {
   background: linear-gradient(180deg, rgba(0, 4, 21, 0) 40%, rgba(0, 4, 21, 0.85) 100%);
 }
 
-/* the art column stretches when "More details" expands the text column;
-   contain keeps the whole thumbnail visible at any card height */
+/* The art column ratio changes as "More details" expands the card, so no
+   fixed image ratio can match every state. Cover avoids letterbox bands; the
+   thumbnails are drawn with wide safe margins so the crop never hits content. */
 .project.has-image .project-image {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: #05070c;
 }
 
 .project.has-image .project-art {
